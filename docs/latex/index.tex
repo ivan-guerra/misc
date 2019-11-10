@@ -1,1 +1,21 @@
-A classic word search solver with wrap and no wrap modes. 
+\hypertarget{index_autotoc_md1}{}\doxysubsection{Overview}\label{index_autotoc_md1}
+Super Word Search is a word search puzzle solver. Given an NxM character grid, a search mode, and a list of terms to search, Super Word Search will compute the start and end points of each term that can be found in the search grid. The application supports W\+R\+AP and NO W\+R\+AP modes. NO W\+R\+AP does not allow words to wrap around the boundaries of the word grid whereas W\+R\+AP does.\hypertarget{index_autotoc_md2}{}\doxysubsection{Usage}\label{index_autotoc_md2}
+To compile, you need a {\bfseries{C++ compiler supporting C++14 features}} and {\bfseries{C\+Make version 3.\+12 or higher}}. Follow the commands below to download and build the source. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[user@host ~]\$ git clone https://github.com/ivan-\/guerra/super\_word\_search.git}
+\DoxyCodeLine{[user@host ~]\$ cd super\_word\_search/}
+\DoxyCodeLine{[user@host super\_word\_search]\$ mkdir build \&\& cd build}
+\DoxyCodeLine{[user@host build]\$ cmake .. \&\& make \&\& make install}
+\end{DoxyCode}
+ If the build was successful, you should see a bin/ directory under super\+\_\+word\+\_\+search/. The commands below outline how to run the application as well as the unit tests. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[user@host build]\$ cd ../bin}
+\DoxyCodeLine{[user@host bin]\$ ./wsearch}
+\DoxyCodeLine{[user@host bin]\$ ./wsearch\_test}
+\end{DoxyCode}
+ If you have \href{http://www.stack.nl/~dimitri/doxygen/}{\texttt{ Doxygen}} installed, you can build the project docs using the following command. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[user@host super\_word\_search]\$ doxygen doxygen\_conf}
+\end{DoxyCode}
+ Alternatively, you can view the prebuilt docs by opening docs/html/index.\+html in your browser.\hypertarget{index_autotoc_md3}{}\doxysubsection{License}\label{index_autotoc_md3}
+This software is licensed under the M\+IT Open Source license (see L\+I\+C\+E\+N\+SE file). 

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Super Word Search: super_word_search</title>
+<title>Super Word Search: Super Word Search</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,10 +63,26 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">super_word_search </div>  </div>
+<div class="title">Super Word Search </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A classic word search solver with wrap and no wrap modes. </p>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md1"></a>
+Overview</h2>
+<p>Super Word Search is a word search puzzle solver. Given an NxM character grid, a search mode, and a list of terms to search, Super Word Search will compute the start and end points of each term that can be found in the search grid. The application supports WRAP and NO WRAP modes. NO WRAP does not allow words to wrap around the boundaries of the word grid whereas WRAP does.</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Usage</h2>
+<p>To compile, you need a <b>C++ compiler supporting C++14 features</b> and <b>CMake version 3.12 or higher</b>. Follow the commands below to download and build the source. </p><div class="fragment"><div class="line">[user@host ~]$ git clone https://github.com/ivan-guerra/super_word_search.git</div>
+<div class="line">[user@host ~]$ cd super_word_search/</div>
+<div class="line">[user@host super_word_search]$ mkdir build &amp;&amp; cd build</div>
+<div class="line">[user@host build]$ cmake .. &amp;&amp; make &amp;&amp; make install</div>
+</div><!-- fragment --><p> If the build was successful, you should see a bin/ directory under super_word_search/. The commands below outline how to run the application as well as the unit tests. </p><div class="fragment"><div class="line">[user@host build]$ cd ../bin</div>
+<div class="line">[user@host bin]$ ./wsearch</div>
+<div class="line">[user@host bin]$ ./wsearch_test</div>
+</div><!-- fragment --><p> If you have <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a> installed, you can build the project docs using the following command. </p><div class="fragment"><div class="line">[user@host super_word_search]$ doxygen doxygen_conf</div>
+</div><!-- fragment --><p> Alternatively, you can view the prebuilt docs by opening docs/html/index.html in your browser.</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+License</h2>
+<p>This software is licensed under the MIT Open Source license (see LICENSE file). </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['super_5fword_5fsearch_54',['super_word_search',['../index.html',1,'']]]
+  ['super_20word_20search_56',['Super Word Search',['../index.html',1,'']]]
 ];
