@@ -5,7 +5,7 @@ set(ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(LIB_INSTALL_DIR ${ROOT_DIR}/lib)
 set(BIN_INSTALL_DIR ${ROOT_DIR}/bin)
 
-add_subdirectory(src)
+add_subdirectory(wsearch)
 
 # TODO: Add unit tests.
 #enable_testing()
