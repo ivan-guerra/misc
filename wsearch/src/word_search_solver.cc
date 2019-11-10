@@ -1,3 +1,8 @@
+/*!
+ * \file word_search_solver.cc
+ * \brief WordSearchSolver definition.
+ */
+
 #include <tuple>
 #include <string>
 #include <vector>
@@ -20,6 +25,7 @@ WordSearchSolver::WordSearchSolver(const std::string& puzzle_file) :
 
 bool WordSearchSolver::load_puzzle()
 {
+    // The previously loaded puzzle is flushed before we load the next.
     if (has_load_)
         clear_puzzle();
 
@@ -29,7 +35,9 @@ bool WordSearchSolver::load_puzzle()
     }
 
     if (!get_grid()) {
-        if (!puzzle_file_handle_.eof())
+        if (puzzle_file_handle_.eof())
+            std::cerr << "EOF reached. No more puzzles to solve!" << std::endl;
+        else
             std::cerr << "Unable to load grid. Verify you provided valid row/col numbers and data." << std::endl;
         return false;
     }
@@ -85,6 +93,9 @@ void WordSearchSolver::print_results() const
 
 bool WordSearchSolver::get_grid()
 {
+    if (!puzzle_file_handle_)
+        return false;
+
     int rowlen = 0;
     int collen = 0;
     puzzle_file_handle_ >> rowlen >> collen;
@@ -92,7 +103,7 @@ bool WordSearchSolver::get_grid()
         return false;
 
     std::string curr_row;
-    for (int i = 0; i < rowlen; ++i) {
+    for (int i = 0; puzzle_file_handle_ && i < rowlen; ++i) {
         puzzle_file_handle_ >> curr_row;
         std::istringstream is(curr_row);
         word_grid_.push_back({std::istream_iterator<char>(is), std::istream_iterator<char>()});
@@ -103,12 +114,15 @@ bool WordSearchSolver::get_grid()
 
 bool WordSearchSolver::get_mode()
 {
+    if (!puzzle_file_handle_)
+        return false;
+
     std::string mode;
     puzzle_file_handle_ >> mode;
     if (mode == WRAP_MODE) {
         wrap_enabled_ = true;
     } else {
-        puzzle_file_handle_ >> mode; // Make sure we extract the 'WRAP' in 'NO WRAP'
+        puzzle_file_handle_ >> mode; // Extract the 'WRAP' in 'NO WRAP'.
         wrap_enabled_ = false;
     }
 
@@ -117,17 +131,21 @@ bool WordSearchSolver::get_mode()
 
 bool WordSearchSolver::get_search_words()
 {
+    if (!puzzle_file_handle_)
+        return false;
+
     std::size_t nwords = 0;
     puzzle_file_handle_ >> nwords;
     if (nwords <= 0)
         return false;
 
     std::string curr_word;
-    for (std::size_t i = 0; i < nwords; ++i) {
+    for (std::size_t i = 0; puzzle_file_handle_ && i < nwords; ++i) {
         puzzle_file_handle_ >> curr_word;
         search_words_.emplace_back(curr_word);
     }
 
+    // Check that we actually read the number of words that we expected.
     if (search_words_.size() != nwords)
         return false;
 
@@ -195,4 +213,4 @@ void WordSearchSolver::directional_search(int row, int col, const std::string& w
     search_results_.push_back({});
 }
 
-}
+} // end supersearch

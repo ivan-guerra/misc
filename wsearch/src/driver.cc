@@ -1,3 +1,12 @@
+/*!
+ * \file driver.cc
+ * \brief Execute the Super Word Search puzzle solver on a user specified puzzle file.
+ * \details This driver prompts the user for a word search puzzle data file and then
+ *          uses an object of the WordSearchSolver to solve all puzzles contained
+ *          within the data file. All output is sent to stdout. Error messages
+ *          if any are sent to stderr.
+ */
+
 #include <iostream>
 #include "word_search_solver.h"
 

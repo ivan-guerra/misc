@@ -1,0 +1,307 @@
+\hypertarget{classsupersearch_1_1WordSearchSolver}{}\doxysection{supersearch\+::Word\+Search\+Solver Class Reference}
+\label{classsupersearch_1_1WordSearchSolver}\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+
+
+Declare the interface for a class whose purpose is to solve word puzzles.  
+
+
+
+
+{\ttfamily \#include $<$word\+\_\+search\+\_\+solver.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a4aa67156280d396acc4437ca2bc6e4c2}{Word\+Search\+Solver}} (const std\+::string \&puzzle\+\_\+file=\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ab1ec2411e7a545a79a094a9441629e8d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+Z\+Z\+L\+E\+\_\+\+F\+I\+LE}})
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} object purposed to read from {\ttfamily puzzle\+\_\+file}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a6a67f8ab67e0d0706a2a4e0c77fc7a56}{Word\+Search\+Solver}} (const \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} \&wss)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} objects are not copy constructable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a854d2bb14f2eaff04347599c677c2eda}{Word\+Search\+Solver}} (\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} \&\&wss)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} objects do not implement move semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} \& \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a9b45d2b87ca42903ec3fe8d34c8441a8}{operator=}} (const \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} \&wss)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} objects do not support assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a070a9f8386b56a68d1b34de715188bc2}{$\sim$\+Word\+Search\+Solver}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a9de105c83c65046ac7b54db6db94b663}{load\+\_\+puzzle}} ()
+\begin{DoxyCompactList}\small\item\em Load a puzzle from the input puzzle data file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a7abb8aab54ed4b20cdbbb6108213b967}{solve}} ()
+\begin{DoxyCompactList}\small\item\em Search for all input search terms in the word grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ad63cadea17bded77bd10f4aea1776da1}{print\+\_\+results}} () const
+\begin{DoxyCompactList}\small\item\em Print the solution to the current word search puzzle to stdout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ad2b2414452dab100aeb8cec12f0109e9}{clear\+\_\+puzzle}} ()
+\begin{DoxyCompactList}\small\item\em Reset the state of the current word search puzzle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a5600b1a58e4b4256a56db1ea4c8f9e10}{get\+\_\+grid}} ()
+\begin{DoxyCompactList}\small\item\em Load the word search grid into memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_aba692b10a4ada7c92ddcdaf78b59c3cb}{get\+\_\+mode}} ()
+\begin{DoxyCompactList}\small\item\em Load the search mode data from file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a41c58e9238d8156f569c1a6aed5dc236}{get\+\_\+search\+\_\+words}} ()
+\begin{DoxyCompactList}\small\item\em Load all search terms into memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a531ce59e4fd3923b9b381055391400bd}{wrap\+\_\+move}} (int limit, int pos) const
+\begin{DoxyCompactList}\small\item\em Wrap \textbackslash{}pos around {\ttfamily limit}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_aec983409599ab7dc8fb659d6932624c3}{directional\+\_\+search}} (int row, int col, const std\+::string \&word)
+\begin{DoxyCompactList}\small\item\em Search for {\ttfamily word} in \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_abd647a7e668e1dfef961b78aff4faa45}{word\+\_\+grid\+\_\+}} starting from the index ({\ttfamily row},{\ttfamily col}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a2275aa22ff7fbc33ef84a9a31ea6826e}{has\+\_\+load\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a3fe5a6b5812c7bf60be1db89626ad76f}{wrap\+\_\+enabled\+\_\+}}
+\item 
+std\+::ifstream \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a8ed9233314ef8965adb56e4217ec8705}{puzzle\+\_\+file\+\_\+handle\+\_\+}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ac19c7e56e827c2c48c501ae12d277bc1}{search\+\_\+words\+\_\+}}
+\item 
+std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_abd647a7e668e1dfef961b78aff4faa45}{word\+\_\+grid\+\_\+}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::tuple$<$ int, int $>$ $>$ $>$ \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a9c1ec74cbd5810010afc967056f94f37}{search\+\_\+results\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const static std\+::string \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ac785a767a743b4123ef0c24e8a6d16d0}{W\+R\+A\+P\+\_\+\+M\+O\+DE}}
+\item 
+const static std\+::string \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ab1ec2411e7a545a79a094a9441629e8d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+Z\+Z\+L\+E\+\_\+\+F\+I\+LE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declare the interface for a class whose purpose is to solve word puzzles. 
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} exposes an interface which allows the user to (1) Load word puzzle data from a text file. (2) Solve the word puzzle in either a wrapped or no wrap mode. (3) Print the word puzzle solution to stdout. (4) Perform (1)-\/(3) for each subsequent puzzle in the input text file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a4aa67156280d396acc4437ca2bc6e4c2}\label{classsupersearch_1_1WordSearchSolver_a4aa67156280d396acc4437ca2bc6e4c2}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!WordSearchSolver@{WordSearchSolver}}
+\index{WordSearchSolver@{WordSearchSolver}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{WordSearchSolver()}{WordSearchSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily supersearch\+::\+Word\+Search\+Solver\+::\+Word\+Search\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{puzzle\+\_\+file = {\ttfamily \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ab1ec2411e7a545a79a094a9441629e8d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+Z\+Z\+L\+E\+\_\+\+F\+I\+LE}}} }\end{DoxyParamCaption})}
+
+
+
+Construct a \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} object purposed to read from {\ttfamily puzzle\+\_\+file}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puzzle\+\_\+file} & An absolute or relative path to the text file containing puzzle data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a6a67f8ab67e0d0706a2a4e0c77fc7a56}\label{classsupersearch_1_1WordSearchSolver_a6a67f8ab67e0d0706a2a4e0c77fc7a56}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!WordSearchSolver@{WordSearchSolver}}
+\index{WordSearchSolver@{WordSearchSolver}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{WordSearchSolver()}{WordSearchSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily supersearch\+::\+Word\+Search\+Solver\+::\+Word\+Search\+Solver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} \&}]{wss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} objects are not copy constructable. 
+
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a854d2bb14f2eaff04347599c677c2eda}\label{classsupersearch_1_1WordSearchSolver_a854d2bb14f2eaff04347599c677c2eda}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!WordSearchSolver@{WordSearchSolver}}
+\index{WordSearchSolver@{WordSearchSolver}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{WordSearchSolver()}{WordSearchSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily supersearch\+::\+Word\+Search\+Solver\+::\+Word\+Search\+Solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} \&\&}]{wss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} objects do not implement move semantics. 
+
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a070a9f8386b56a68d1b34de715188bc2}\label{classsupersearch_1_1WordSearchSolver_a070a9f8386b56a68d1b34de715188bc2}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!````~WordSearchSolver@{$\sim$WordSearchSolver}}
+\index{````~WordSearchSolver@{$\sim$WordSearchSolver}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{$\sim$WordSearchSolver()}{~WordSearchSolver()}}
+{\footnotesize\ttfamily supersearch\+::\+Word\+Search\+Solver\+::$\sim$\+Word\+Search\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+All members of a \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} will be automatically destroyed. The fstream file handle will be closed on our behalf by the object\textquotesingle{}s destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_ad2b2414452dab100aeb8cec12f0109e9}\label{classsupersearch_1_1WordSearchSolver_ad2b2414452dab100aeb8cec12f0109e9}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!clear\_puzzle@{clear\_puzzle}}
+\index{clear\_puzzle@{clear\_puzzle}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{clear\_puzzle()}{clear\_puzzle()}}
+{\footnotesize\ttfamily void supersearch\+::\+Word\+Search\+Solver\+::clear\+\_\+puzzle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the state of the current word search puzzle. 
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ad2b2414452dab100aeb8cec12f0109e9}{clear\+\_\+puzzle()}} updates the internal state of \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} instance such that the current loaded puzzle (if any) is discarded. Note, memory allocated during a previous call to \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a9de105c83c65046ac7b54db6db94b663}{load\+\_\+puzzle()}} or \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a7abb8aab54ed4b20cdbbb6108213b967}{solve()}} is not necessarily freed. \mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_aec983409599ab7dc8fb659d6932624c3}\label{classsupersearch_1_1WordSearchSolver_aec983409599ab7dc8fb659d6932624c3}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!directional\_search@{directional\_search}}
+\index{directional\_search@{directional\_search}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{directional\_search()}{directional\_search()}}
+{\footnotesize\ttfamily void supersearch\+::\+Word\+Search\+Solver\+::directional\+\_\+search (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{const std\+::string \&}]{word }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Search for {\ttfamily word} in \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_abd647a7e668e1dfef961b78aff4faa45}{word\+\_\+grid\+\_\+}} starting from the index ({\ttfamily row},{\ttfamily col}). 
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_aec983409599ab7dc8fb659d6932624c3}{directional\+\_\+search()}} tries to construct {\ttfamily word} starting from index ({\ttfamily row}, {\ttfamily col}). The search goes down all 8 possible paths. If wrapping is enabled, the search will automatically wrap around the bounds of the word grid. 
+\begin{DoxyParams}{Parameters}
+{\em row} & Row index from which to begin the search. \\
+\hline
+{\em col} & Column index from which to begin the search. \\
+\hline
+{\em word} & Word to search for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a5600b1a58e4b4256a56db1ea4c8f9e10}\label{classsupersearch_1_1WordSearchSolver_a5600b1a58e4b4256a56db1ea4c8f9e10}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!get\_grid@{get\_grid}}
+\index{get\_grid@{get\_grid}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{get\_grid()}{get\_grid()}}
+{\footnotesize\ttfamily bool supersearch\+::\+Word\+Search\+Solver\+::get\+\_\+grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load the word search grid into memory. 
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a5600b1a58e4b4256a56db1ea4c8f9e10}{get\+\_\+grid()}} attempts to read the puzzle\textquotesingle{}s dimension data from the input file and then proceeds to read Nx\+M-\/length strings. The strings are decomposed into chars and the end result is an NxM matrix of chars representing the word search grid. The representation is stored in \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_abd647a7e668e1dfef961b78aff4faa45}{word\+\_\+grid\+\_\+}}. \begin{DoxyReturn}{Returns}
+True if the word search grid is loaded into memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_aba692b10a4ada7c92ddcdaf78b59c3cb}\label{classsupersearch_1_1WordSearchSolver_aba692b10a4ada7c92ddcdaf78b59c3cb}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!get\_mode@{get\_mode}}
+\index{get\_mode@{get\_mode}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{get\_mode()}{get\_mode()}}
+{\footnotesize\ttfamily bool supersearch\+::\+Word\+Search\+Solver\+::get\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load the search mode data from file. 
+
+During \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_aba692b10a4ada7c92ddcdaf78b59c3cb}{get\+\_\+mode()}}, if the read string is W\+R\+AP, \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a3fe5a6b5812c7bf60be1db89626ad76f}{wrap\+\_\+enabled\+\_\+}} is set to true, otherwise \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a3fe5a6b5812c7bf60be1db89626ad76f}{wrap\+\_\+enabled\+\_\+}} is set to false. \begin{DoxyReturn}{Returns}
+True if search mode data is loaded successfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a41c58e9238d8156f569c1a6aed5dc236}\label{classsupersearch_1_1WordSearchSolver_a41c58e9238d8156f569c1a6aed5dc236}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!get\_search\_words@{get\_search\_words}}
+\index{get\_search\_words@{get\_search\_words}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{get\_search\_words()}{get\_search\_words()}}
+{\footnotesize\ttfamily bool supersearch\+::\+Word\+Search\+Solver\+::get\+\_\+search\+\_\+words (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load all search terms into memory. 
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a41c58e9238d8156f569c1a6aed5dc236}{get\+\_\+search\+\_\+words()}} reads in the count of search terms, nwords, and then proceeds to read nwords strings into memory storing the strings in \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_ac19c7e56e827c2c48c501ae12d277bc1}{search\+\_\+words\+\_\+}}. \begin{DoxyReturn}{Returns}
+True if all search terms are loaded. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a9de105c83c65046ac7b54db6db94b663}\label{classsupersearch_1_1WordSearchSolver_a9de105c83c65046ac7b54db6db94b663}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!load\_puzzle@{load\_puzzle}}
+\index{load\_puzzle@{load\_puzzle}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{load\_puzzle()}{load\_puzzle()}}
+{\footnotesize\ttfamily bool supersearch\+::\+Word\+Search\+Solver\+::load\+\_\+puzzle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load a puzzle from the input puzzle data file. 
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a9de105c83c65046ac7b54db6db94b663}{load\+\_\+puzzle()}} is responsible for fetching all state data associated with a puzzle from the input file. Puzzle state data includes (1) The word search grid. (2) The search mode. (3) The list of search terms. If any of (1)-\/(3) fails, \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a9de105c83c65046ac7b54db6db94b663}{load\+\_\+puzzle()}} returns false and prints an error message to stderr. \begin{DoxyReturn}{Returns}
+True if all puzzle state data is loaded into memory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a9b45d2b87ca42903ec3fe8d34c8441a8}\label{classsupersearch_1_1WordSearchSolver_a9b45d2b87ca42903ec3fe8d34c8441a8}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!operator=@{operator=}}
+\index{operator=@{operator=}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}}\& supersearch\+::\+Word\+Search\+Solver\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} \&}]{wss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver}{Word\+Search\+Solver}} objects do not support assignment. 
+
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_ad63cadea17bded77bd10f4aea1776da1}\label{classsupersearch_1_1WordSearchSolver_ad63cadea17bded77bd10f4aea1776da1}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!print\_results@{print\_results}}
+\index{print\_results@{print\_results}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{print\_results()}{print\_results()}}
+{\footnotesize\ttfamily void supersearch\+::\+Word\+Search\+Solver\+::print\+\_\+results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Print the solution to the current word search puzzle to stdout. 
+
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a7abb8aab54ed4b20cdbbb6108213b967}\label{classsupersearch_1_1WordSearchSolver_a7abb8aab54ed4b20cdbbb6108213b967}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!solve@{solve}}
+\index{solve@{solve}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily bool supersearch\+::\+Word\+Search\+Solver\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Search for all input search terms in the word grid. 
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a7abb8aab54ed4b20cdbbb6108213b967}{solve()}} attempts find search terms in the word grid by iterating over the grid and launching a directional search at each cell. This directional search goes down all 8 possible paths. If found, the search term\textquotesingle{}s starting and ending indices are stored. \begin{DoxyReturn}{Returns}
+True if a search for each search term is performed successfully. Note, a return value of true does N\+OT indicate all search terms were found! 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a531ce59e4fd3923b9b381055391400bd}\label{classsupersearch_1_1WordSearchSolver_a531ce59e4fd3923b9b381055391400bd}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!wrap\_move@{wrap\_move}}
+\index{wrap\_move@{wrap\_move}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{wrap\_move()}{wrap\_move()}}
+{\footnotesize\ttfamily int supersearch\+::\+Word\+Search\+Solver\+::wrap\+\_\+move (\begin{DoxyParamCaption}\item[{int}]{limit,  }\item[{int}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wrap \textbackslash{}pos around {\ttfamily limit}. 
+
+\mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_a531ce59e4fd3923b9b381055391400bd}{wrap\+\_\+move()}} is a helper method of \mbox{\hyperlink{classsupersearch_1_1WordSearchSolver_aec983409599ab7dc8fb659d6932624c3}{directional\+\_\+search()}} that takes a position \textbackslash{}pos and wraps it around a boundary, {\ttfamily limit}. There are three cases\+: (1) pos $>$= limit -\/$>$ pos = 0 (2) pos $<$ 0 -\/$>$ pos = limit -\/ 1 (3) pos does not satisfy (1)-\/(2) and thus remains unchanged \begin{DoxyReturn}{Returns}
+An integer representing the wrap of {\ttfamily pos} around {\ttfamily limit}. If no wrapping was performed, {\ttfamily pos} is returned. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_ab1ec2411e7a545a79a094a9441629e8d}\label{classsupersearch_1_1WordSearchSolver_ab1ec2411e7a545a79a094a9441629e8d}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!DEFAULT\_PUZZLE\_FILE@{DEFAULT\_PUZZLE\_FILE}}
+\index{DEFAULT\_PUZZLE\_FILE@{DEFAULT\_PUZZLE\_FILE}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_PUZZLE\_FILE}{DEFAULT\_PUZZLE\_FILE}}
+{\footnotesize\ttfamily const std\+::string supersearch\+::\+Word\+Search\+Solver\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+Z\+Z\+L\+E\+\_\+\+F\+I\+LE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Default path to the puzzle data text file. \mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a2275aa22ff7fbc33ef84a9a31ea6826e}\label{classsupersearch_1_1WordSearchSolver_a2275aa22ff7fbc33ef84a9a31ea6826e}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!has\_load\_@{has\_load\_}}
+\index{has\_load\_@{has\_load\_}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{has\_load\_}{has\_load\_}}
+{\footnotesize\ttfamily bool supersearch\+::\+Word\+Search\+Solver\+::has\+\_\+load\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Flag indicating whether this instance has already loaded a puzzle. \mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a8ed9233314ef8965adb56e4217ec8705}\label{classsupersearch_1_1WordSearchSolver_a8ed9233314ef8965adb56e4217ec8705}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!puzzle\_file\_handle\_@{puzzle\_file\_handle\_}}
+\index{puzzle\_file\_handle\_@{puzzle\_file\_handle\_}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{puzzle\_file\_handle\_}{puzzle\_file\_handle\_}}
+{\footnotesize\ttfamily std\+::ifstream supersearch\+::\+Word\+Search\+Solver\+::puzzle\+\_\+file\+\_\+handle\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Handle to the puzzle file ifstream. \mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a9c1ec74cbd5810010afc967056f94f37}\label{classsupersearch_1_1WordSearchSolver_a9c1ec74cbd5810010afc967056f94f37}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!search\_results\_@{search\_results\_}}
+\index{search\_results\_@{search\_results\_}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{search\_results\_}{search\_results\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::tuple$<$int,int$>$ $>$ $>$ supersearch\+::\+Word\+Search\+Solver\+::search\+\_\+results\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+x,y coordinate pairs representing the start/end point of a search term in word grid. \mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_ac19c7e56e827c2c48c501ae12d277bc1}\label{classsupersearch_1_1WordSearchSolver_ac19c7e56e827c2c48c501ae12d277bc1}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!search\_words\_@{search\_words\_}}
+\index{search\_words\_@{search\_words\_}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{search\_words\_}{search\_words\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ supersearch\+::\+Word\+Search\+Solver\+::search\+\_\+words\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of search terms to search for in this puzzle. \mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_abd647a7e668e1dfef961b78aff4faa45}\label{classsupersearch_1_1WordSearchSolver_abd647a7e668e1dfef961b78aff4faa45}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!word\_grid\_@{word\_grid\_}}
+\index{word\_grid\_@{word\_grid\_}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{word\_grid\_}{word\_grid\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$char$>$ $>$ supersearch\+::\+Word\+Search\+Solver\+::word\+\_\+grid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Character matrix representing the word grid. \mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_a3fe5a6b5812c7bf60be1db89626ad76f}\label{classsupersearch_1_1WordSearchSolver_a3fe5a6b5812c7bf60be1db89626ad76f}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!wrap\_enabled\_@{wrap\_enabled\_}}
+\index{wrap\_enabled\_@{wrap\_enabled\_}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{wrap\_enabled\_}{wrap\_enabled\_}}
+{\footnotesize\ttfamily bool supersearch\+::\+Word\+Search\+Solver\+::wrap\+\_\+enabled\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Flag indicating whether the wrapping search mode is enabled. \mbox{\Hypertarget{classsupersearch_1_1WordSearchSolver_ac785a767a743b4123ef0c24e8a6d16d0}\label{classsupersearch_1_1WordSearchSolver_ac785a767a743b4123ef0c24e8a6d16d0}} 
+\index{supersearch::WordSearchSolver@{supersearch::WordSearchSolver}!WRAP\_MODE@{WRAP\_MODE}}
+\index{WRAP\_MODE@{WRAP\_MODE}!supersearch::WordSearchSolver@{supersearch::WordSearchSolver}}
+\doxysubsubsection{\texorpdfstring{WRAP\_MODE}{WRAP\_MODE}}
+{\footnotesize\ttfamily const std\+::string supersearch\+::\+Word\+Search\+Solver\+::\+W\+R\+A\+P\+\_\+\+M\+O\+DE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Token indicating wrapping should be enabled during search. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wsearch/include/\mbox{\hyperlink{word__search__solver_8h}{word\+\_\+search\+\_\+solver.\+h}}\item 
+wsearch/src/\mbox{\hyperlink{word__search__solver_8cc}{word\+\_\+search\+\_\+solver.\+cc}}\end{DoxyCompactItemize}
