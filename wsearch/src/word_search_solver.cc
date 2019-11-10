@@ -50,7 +50,7 @@ bool WordSearchSolver::load_puzzle()
 
     if (!get_search_words()) {
         std::cerr << "Unable to retrieve search terms. Verify you provided a valid term count and "
-            << "list of terms" << std::endl;
+            << "list of terms." << std::endl;
         return false;
     }
 
@@ -61,8 +61,10 @@ bool WordSearchSolver::load_puzzle()
 
 bool WordSearchSolver::solve()
 {
-    if (!has_load_)
+    if (!has_load_) {
+        std::cerr << "Unable to solve puzzle, no puzzle data available. Did you forget to call load_puzzle()?" << std::endl;
         return false;
+    }
 
     for (const auto& word : search_words_) {
         for (std::size_t i = 0; i < word_grid_.size(); ++i) {

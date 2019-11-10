@@ -77,6 +77,9 @@ public:
      */
     bool solve();
 
+    const auto& get_soln() const { return search_results_; }
+    auto get_soln() { return search_results_; }
+
     /*!
      * \brief Print the solution to the current word search puzzle to stdout.
      */

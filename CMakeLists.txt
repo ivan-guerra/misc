@@ -7,8 +7,6 @@ set(BIN_INSTALL_DIR ${ROOT_DIR}/bin)
 
 add_subdirectory(wsearch)
 
-# TODO: Add unit tests.
-#enable_testing()
-#if (testing_enabled)
-#    add_subdirectory(test)
-#endif
+enable_testing()
+add_subdirectory(test)
+add_subdirectory(lib/googletest)
