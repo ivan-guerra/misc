@@ -6,3 +6,4 @@ CMakeCache.txt
 install_manifest.txt
 Makefile
 tags
+lib/libwsearch_lib.a
