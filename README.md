@@ -7,7 +7,7 @@ in the search grid. The application supports WRAP and NO WRAP modes. NO WRAP doe
 to wrap around the boundaries of the word grid whereas WRAP does.
 
 ### Usage
-To compile, you need a **C++ compiler supporting C++14 features** and **CMake version 3.12 or higher**. Follow
+To compile, you need a **C++ compiler supporting C++14 features** and **CMake version 3.10 or higher**. Follow
 the commands below to download and build the source.
 ```
 [user@host ~]$ git clone https://github.com/ivan-guerra/super_word_search.git
