@@ -1,0 +1,66 @@
+\hypertarget{driver_8cc}{}\doxysection{app/src/driver.cc File Reference}
+\label{driver_8cc}\index{app/src/driver.cc@{app/src/driver.cc}}
+
+
+Execute a nearest neighbors search on a set of 3D points.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}3d\+\_\+tree.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{driver_8cc_af275fcc8ce7519475082fb9c95c5188e}{load\+\_\+points}} (const std\+::string \&point\+\_\+file, std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&points)
+\begin{DoxyCompactList}\small\item\em Load the 3D points in {\ttfamily point\+\_\+file} into {\ttfamily points}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{driver_8cc_a9f980b2f66a1e51cdc34fe2d6725a877}{print\+\_\+results}} (const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&results)
+\begin{DoxyCompactList}\small\item\em Print the contents of the {\ttfamily results} matrix to stdout. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{driver_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Execute a nearest neighbors search on a set of 3D points. 
+
+This driver prompts the user to enter the path to a text file containing a list of 3D coordinates. The user is also prompted for a search radius value. A 3-\/d tree is then constructed using the input points. For each point in the input, the point\textquotesingle{}s neighbor(s) who are within the given radius are recorded. The result of the nearest neighbors search for each point is output to stdout. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{driver_8cc_af275fcc8ce7519475082fb9c95c5188e}\label{driver_8cc_af275fcc8ce7519475082fb9c95c5188e}} 
+\index{driver.cc@{driver.cc}!load\_points@{load\_points}}
+\index{load\_points@{load\_points}!driver.cc@{driver.cc}}
+\doxysubsubsection{\texorpdfstring{load\_points()}{load\_points()}}
+{\footnotesize\ttfamily bool load\+\_\+points (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{point\+\_\+file,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&}]{points }\end{DoxyParamCaption})}
+
+
+
+Load the 3D points in {\ttfamily point\+\_\+file} into {\ttfamily points}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+file} & Path to the 3D point data file. \\
+\hline
+{\em points} & Vector of ingested 3D points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if all points are loaded from the input file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{driver_8cc_a3c04138a5bfe5d72780bb7e82a18e627}\label{driver_8cc_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{driver.cc@{driver.cc}!main@{main}}
+\index{main@{main}!driver.cc@{driver.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver_8cc_a9f980b2f66a1e51cdc34fe2d6725a877}\label{driver_8cc_a9f980b2f66a1e51cdc34fe2d6725a877}} 
+\index{driver.cc@{driver.cc}!print\_results@{print\_results}}
+\index{print\_results@{print\_results}!driver.cc@{driver.cc}}
+\doxysubsubsection{\texorpdfstring{print\_results()}{print\_results()}}
+{\footnotesize\ttfamily void print\+\_\+results (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&}]{results }\end{DoxyParamCaption})}
+
+
+
+Print the contents of the {\ttfamily results} matrix to stdout. 
+
+For each point, we print in the format point\+\_\+id\+:\mbox{[}num\+\_\+neighbors $\vert$ neighbor\+\_\+ids\mbox{]} 
