@@ -7,7 +7,6 @@ set(BIN_INSTALL_DIR ${ROOT_DIR}/bin)
 
 add_subdirectory(app)
 
-# TODO: Add unit tests.
-#enable_testing()
-#add_subdirectory(test)
-#add_subdirectory(lib/googletest)
+enable_testing()
+add_subdirectory(test)
+add_subdirectory(lib/googletest)
