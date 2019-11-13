@@ -1,0 +1,162 @@
+\hypertarget{classDiceInvaders_1_1Bomb}{}\doxysection{Dice\+Invaders\+::Bomb Class Reference}
+\label{classDiceInvaders_1_1Bomb}\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+
+
+Represent a bomb dropped by the alien.  
+
+
+
+
+{\ttfamily \#include $<$Bomb.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb_a2b9d09c645f28399772fc17e16165b70}{Bomb}} ()=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} cannot be default constructed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb_aa3f59b0021be10394a739df1a27ef2e5}{Bomb}} (\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$engine, \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$bomb\+\_\+sprite, const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&\mbox{\hyperlink{classDiceInvaders_1_1Bomb_ab4888be5174cbe17c157c68fed87a096}{position}})
+\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb_aa6c185ec71ee5bcb65f8453d40b8f2fb}{Bomb}} (const \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} \&b)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} cannot be copy constructed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb_af70bce9ba747c013bb00141be22aba70}{Bomb}} (\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} \&\&b)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} does not support move semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb_a3746451b48ad51fbdaac0bb022df95ee}{$\sim$\+Bomb}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} \& \mbox{\hyperlink{classDiceInvaders_1_1Bomb_ad18b9e33bf9e56edf00eb0fdc89aa01f}{operator=}} (const \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} \&b)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} does not support assignment. \end{DoxyCompactList}\item 
+std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1Bomb_ab4888be5174cbe17c157c68fed87a096}{position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the bomb in 2D space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiceInvaders_1_1Bomb_a89abb24ae58a12b8b40d24d16108e090}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the position of the bomb on screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1Bomb_a9148419f3b60c30f0eb5f66838a612de}{engine\+\_\+}}
+\item 
+\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1Bomb_a307536aa01be44360261207f25ff98f7}{bomb\+\_\+sprite\+\_\+}}
+\item 
+std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1Bomb_aaf19ecfb512faa1e328bde54b70f20ca}{position\+\_\+}}
+\item 
+double \mbox{\hyperlink{classDiceInvaders_1_1Bomb_a92154769d096ced32a05a90588cff6e8}{last\+\_\+update\+\_\+time\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represent a bomb dropped by the alien. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_a2b9d09c645f28399772fc17e16165b70}\label{classDiceInvaders_1_1Bomb_a2b9d09c645f28399772fc17e16165b70}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{Bomb()}{Bomb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Bomb\+::\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} cannot be default constructed. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_aa3f59b0021be10394a739df1a27ef2e5}\label{classDiceInvaders_1_1Bomb_aa3f59b0021be10394a739df1a27ef2e5}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{Bomb()}{Bomb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Bomb\+::\+Bomb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$}]{bomb\+\_\+sprite,  }\item[{const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&}]{position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_aa6c185ec71ee5bcb65f8453d40b8f2fb}\label{classDiceInvaders_1_1Bomb_aa6c185ec71ee5bcb65f8453d40b8f2fb}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{Bomb()}{Bomb()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Bomb\+::\+Bomb (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} cannot be copy constructed. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_af70bce9ba747c013bb00141be22aba70}\label{classDiceInvaders_1_1Bomb_af70bce9ba747c013bb00141be22aba70}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{Bomb()}{Bomb()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Bomb\+::\+Bomb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} \&\&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} does not support move semantics. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_a3746451b48ad51fbdaac0bb022df95ee}\label{classDiceInvaders_1_1Bomb_a3746451b48ad51fbdaac0bb022df95ee}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!````~Bomb@{$\sim$Bomb}}
+\index{````~Bomb@{$\sim$Bomb}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{$\sim$Bomb()}{~Bomb()}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Bomb\+::$\sim$\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} works with many different pointers but does not allocate any memory of its own. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_ad18b9e33bf9e56edf00eb0fdc89aa01f}\label{classDiceInvaders_1_1Bomb_ad18b9e33bf9e56edf00eb0fdc89aa01f}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!operator=@{operator=}}
+\index{operator=@{operator=}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}}\& Dice\+Invaders\+::\+Bomb\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} does not support assignment. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_ab4888be5174cbe17c157c68fed87a096}\label{classDiceInvaders_1_1Bomb_ab4888be5174cbe17c157c68fed87a096}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!position@{position}}
+\index{position@{position}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$ Dice\+Invaders\+::\+Bomb\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the position of the bomb in 2D space. 
+
+\begin{DoxyReturn}{Returns}
+The position of the bomb in 2D space. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_a89abb24ae58a12b8b40d24d16108e090}\label{classDiceInvaders_1_1Bomb_a89abb24ae58a12b8b40d24d16108e090}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!update@{update}}
+\index{update@{update}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Dice\+Invaders\+::\+Bomb\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the position of the bomb on screen. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1Bomb_a307536aa01be44360261207f25ff98f7}\label{classDiceInvaders_1_1Bomb_a307536aa01be44360261207f25ff98f7}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!bomb\_sprite\_@{bomb\_sprite\_}}
+\index{bomb\_sprite\_@{bomb\_sprite\_}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{bomb\_sprite\_}{bomb\_sprite\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structISprite}{I\+Sprite}}$\ast$ Dice\+Invaders\+::\+Bomb\+::bomb\+\_\+sprite\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} sprite. \mbox{\Hypertarget{classDiceInvaders_1_1Bomb_a9148419f3b60c30f0eb5f66838a612de}\label{classDiceInvaders_1_1Bomb_a9148419f3b60c30f0eb5f66838a612de}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!engine\_@{engine\_}}
+\index{engine\_@{engine\_}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{engine\_}{engine\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}}$\ast$ Dice\+Invaders\+::\+Bomb\+::engine\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Game driver providing draw and elapsed time functionality. \mbox{\Hypertarget{classDiceInvaders_1_1Bomb_a92154769d096ced32a05a90588cff6e8}\label{classDiceInvaders_1_1Bomb_a92154769d096ced32a05a90588cff6e8}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!last\_update\_time\_@{last\_update\_time\_}}
+\index{last\_update\_time\_@{last\_update\_time\_}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{last\_update\_time\_}{last\_update\_time\_}}
+{\footnotesize\ttfamily double Dice\+Invaders\+::\+Bomb\+::last\+\_\+update\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Record of the game time during the last call to \mbox{\hyperlink{classDiceInvaders_1_1Bomb_a89abb24ae58a12b8b40d24d16108e090}{update()}}. \mbox{\Hypertarget{classDiceInvaders_1_1Bomb_aaf19ecfb512faa1e328bde54b70f20ca}\label{classDiceInvaders_1_1Bomb_aaf19ecfb512faa1e328bde54b70f20ca}} 
+\index{DiceInvaders::Bomb@{DiceInvaders::Bomb}!position\_@{position\_}}
+\index{position\_@{position\_}!DiceInvaders::Bomb@{DiceInvaders::Bomb}}
+\doxysubsubsection{\texorpdfstring{position\_}{position\_}}
+{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$ Dice\+Invaders\+::\+Bomb\+::position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} position in 2D space. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+app/include/\mbox{\hyperlink{Bomb_8h}{Bomb.\+h}}\item 
+app/src/\mbox{\hyperlink{Bomb_8cc}{Bomb.\+cc}}\end{DoxyCompactItemize}

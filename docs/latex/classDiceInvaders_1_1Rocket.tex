@@ -1,0 +1,162 @@
+\hypertarget{classDiceInvaders_1_1Rocket}{}\doxysection{Dice\+Invaders\+::Rocket Class Reference}
+\label{classDiceInvaders_1_1Rocket}\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+
+
+Represent a rocket fired by the player\textquotesingle{}s ship.  
+
+
+
+
+{\ttfamily \#include $<$Rocket.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket_ac4820d5123de25c49018607d6ef541c3}{Rocket}} ()=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} cannot be default constructed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket_adb3f1c27c82967ab364f5f7be4aed124}{Rocket}} (\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$engine, \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$rocket\+\_\+sprite, const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1Rocket_a76b4d51f6bc0bd92539fd710ccc4ab0b}{position}})
+\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket_a0ef1dd53b521e102e6ba9f9609882122}{Rocket}} (const \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} \&r)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} cannot be copy constructed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket_ae5f6e27df10f7930d3ff5a1cceca7a8a}{Rocket}} (\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} \&\&r)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} does not support move semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket_a70eef0e567d9bc7b8378e2f3b1485af1}{$\sim$\+Rocket}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} \& \mbox{\hyperlink{classDiceInvaders_1_1Rocket_a1de51f56b002231aa536df7438fb9350}{operator=}} (const \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} \&r)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} does not support assignment. \end{DoxyCompactList}\item 
+std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \& \mbox{\hyperlink{classDiceInvaders_1_1Rocket_a76b4d51f6bc0bd92539fd710ccc4ab0b}{position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the rocket in 2D space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiceInvaders_1_1Rocket_a7129f8e487cd02549db6bea93e26a65e}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the position of the rocket on screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1Rocket_a6ec2b36858a963141318442874bc64ce}{engine\+\_\+}}
+\item 
+\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1Rocket_a242a428d2b30ab81cb49f5ed706f7d3a}{rocket\+\_\+sprite\+\_\+}}
+\item 
+std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1Rocket_a88c36d9acb83c51fc49d71f89a0617d7}{position\+\_\+}}
+\item 
+double \mbox{\hyperlink{classDiceInvaders_1_1Rocket_ad48490a9cd231438f0041923eb48f5ac}{last\+\_\+update\+\_\+time\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represent a rocket fired by the player\textquotesingle{}s ship. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_ac4820d5123de25c49018607d6ef541c3}\label{classDiceInvaders_1_1Rocket_ac4820d5123de25c49018607d6ef541c3}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{Rocket()}{Rocket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Rocket\+::\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} cannot be default constructed. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_adb3f1c27c82967ab364f5f7be4aed124}\label{classDiceInvaders_1_1Rocket_adb3f1c27c82967ab364f5f7be4aed124}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{Rocket()}{Rocket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Rocket\+::\+Rocket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$}]{rocket\+\_\+sprite,  }\item[{const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$}]{position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_a0ef1dd53b521e102e6ba9f9609882122}\label{classDiceInvaders_1_1Rocket_a0ef1dd53b521e102e6ba9f9609882122}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{Rocket()}{Rocket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Rocket\+::\+Rocket (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} cannot be copy constructed. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_ae5f6e27df10f7930d3ff5a1cceca7a8a}\label{classDiceInvaders_1_1Rocket_ae5f6e27df10f7930d3ff5a1cceca7a8a}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{Rocket()}{Rocket()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Rocket\+::\+Rocket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} \&\&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} does not support move semantics. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_a70eef0e567d9bc7b8378e2f3b1485af1}\label{classDiceInvaders_1_1Rocket_a70eef0e567d9bc7b8378e2f3b1485af1}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!````~Rocket@{$\sim$Rocket}}
+\index{````~Rocket@{$\sim$Rocket}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rocket()}{~Rocket()}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Rocket\+::$\sim$\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} works with many different pointers but does not allocate any memory of its own. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_a1de51f56b002231aa536df7438fb9350}\label{classDiceInvaders_1_1Rocket_a1de51f56b002231aa536df7438fb9350}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!operator=@{operator=}}
+\index{operator=@{operator=}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}}\& Dice\+Invaders\+::\+Rocket\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} does not support assignment. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_a76b4d51f6bc0bd92539fd710ccc4ab0b}\label{classDiceInvaders_1_1Rocket_a76b4d51f6bc0bd92539fd710ccc4ab0b}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!position@{position}}
+\index{position@{position}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$\& Dice\+Invaders\+::\+Rocket\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the position of the rocket in 2D space. 
+
+\begin{DoxyReturn}{Returns}
+The position of the rocket in 2D space. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_a7129f8e487cd02549db6bea93e26a65e}\label{classDiceInvaders_1_1Rocket_a7129f8e487cd02549db6bea93e26a65e}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!update@{update}}
+\index{update@{update}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Dice\+Invaders\+::\+Rocket\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the position of the rocket on screen. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1Rocket_a6ec2b36858a963141318442874bc64ce}\label{classDiceInvaders_1_1Rocket_a6ec2b36858a963141318442874bc64ce}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!engine\_@{engine\_}}
+\index{engine\_@{engine\_}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{engine\_}{engine\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}}$\ast$ Dice\+Invaders\+::\+Rocket\+::engine\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Game driver providing draw and elapsed time functionality. \mbox{\Hypertarget{classDiceInvaders_1_1Rocket_ad48490a9cd231438f0041923eb48f5ac}\label{classDiceInvaders_1_1Rocket_ad48490a9cd231438f0041923eb48f5ac}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!last\_update\_time\_@{last\_update\_time\_}}
+\index{last\_update\_time\_@{last\_update\_time\_}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{last\_update\_time\_}{last\_update\_time\_}}
+{\footnotesize\ttfamily double Dice\+Invaders\+::\+Rocket\+::last\+\_\+update\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Record of the game time during the last call to \mbox{\hyperlink{classDiceInvaders_1_1Rocket_a7129f8e487cd02549db6bea93e26a65e}{update()}}. \mbox{\Hypertarget{classDiceInvaders_1_1Rocket_a88c36d9acb83c51fc49d71f89a0617d7}\label{classDiceInvaders_1_1Rocket_a88c36d9acb83c51fc49d71f89a0617d7}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!position\_@{position\_}}
+\index{position\_@{position\_}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{position\_}{position\_}}
+{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$ Dice\+Invaders\+::\+Rocket\+::position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} position in 2D space. \mbox{\Hypertarget{classDiceInvaders_1_1Rocket_a242a428d2b30ab81cb49f5ed706f7d3a}\label{classDiceInvaders_1_1Rocket_a242a428d2b30ab81cb49f5ed706f7d3a}} 
+\index{DiceInvaders::Rocket@{DiceInvaders::Rocket}!rocket\_sprite\_@{rocket\_sprite\_}}
+\index{rocket\_sprite\_@{rocket\_sprite\_}!DiceInvaders::Rocket@{DiceInvaders::Rocket}}
+\doxysubsubsection{\texorpdfstring{rocket\_sprite\_}{rocket\_sprite\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structISprite}{I\+Sprite}}$\ast$ Dice\+Invaders\+::\+Rocket\+::rocket\+\_\+sprite\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} sprite. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+app/include/\mbox{\hyperlink{Rocket_8h}{Rocket.\+h}}\item 
+app/src/\mbox{\hyperlink{Rocket_8cc}{Rocket.\+cc}}\end{DoxyCompactItemize}

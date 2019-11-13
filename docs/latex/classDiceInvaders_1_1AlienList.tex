@@ -1,0 +1,243 @@
+\hypertarget{classDiceInvaders_1_1AlienList}{}\doxysection{Dice\+Invaders\+::Alien\+List Class Reference}
+\label{classDiceInvaders_1_1AlienList}\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+
+
+A doubly-\/linked list specifically used to manage \mbox{\hyperlink{classDiceInvaders_1_1Alien}{Alien}} objects.  
+
+
+
+
+{\ttfamily \#include $<$Alien\+List.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList_a671625e2fd09c9b93543f7866ee0ad44}{Alien\+List}} ()=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} cannot be default constructed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList_ad0788635bcaf833956668ce2d1cdaabb}{Alien\+List}} (\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$engine, \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$alien\+\_\+sprite, I\+S\+Prite $\ast$bomb\+\_\+sprite, const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&screen\+\_\+res)
+\item 
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList_a3416194a98fa8f502e3316edf82759f3}{Alien\+List}} (const \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} \&al)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} cannot be copy constructed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList_aac8af7c33ef7aff87d2142746e0c28f6}{Alien\+List}} (\mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} \&\&al)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} does not support move semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList_ab8a6590706831c21b7354d40feec97ae}{$\sim$\+Alien\+List}} ()=default
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} does not allocate resources that aren\textquotesingle{}t automatically managed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} \& \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a65027548391df3828f98b4ef5e9e4af1}{operator=}} (const \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} \&al)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} does not support assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a5b3515ba95d9366262dc31edd84fb7c5}{resolve\+\_\+collisions}} (\mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} $\ast$player, int direction)
+\begin{DoxyCompactList}\small\item\em Resolve collisions if any between {\ttfamily player} and aliens in the \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDiceInvaders_1_1AlienList_ac75324711e65f6821e51d775df047849}{alien\+\_\+out\+\_\+of\+\_\+bounds}} () const
+\begin{DoxyCompactList}\small\item\em Determine whether any alien in \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} has stepped out of the game bounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a1faf3673b14d7ac9d8c24bab65ac2e76}{spawn\+\_\+aliens}} ()
+\begin{DoxyCompactList}\small\item\em Spawn an army of aliens. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDiceInvaders_1_1AlienList_ac578bbdaae22d08dfea348614f6dba81}{has\+\_\+aliens}} () const
+\begin{DoxyCompactList}\small\item\em Determine whether the \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} contains any aliens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classDiceInvaders_1_1AlienList_ae1e9acde55b31a3202bfef6570ec0892}{has\+\_\+collision}} (const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&pos1, const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&pos2) const
+\begin{DoxyCompactList}\small\item\em Determine whether there is a collision between {\ttfamily pos1} and {\ttfamily pos2}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a2cad14c7c24d581c38766ee94cfecc47}{engine\+\_\+}}
+\item 
+I\+S\+Prite $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a2b7f4d29e2f085d05de77c8605b1b2b4}{alien\+\_\+sprite\+\_\+}}
+\item 
+I\+S\+Prite $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1AlienList_aecf8ec7ccd660884fa901cbc19572254}{bomb\+\_\+sprite\+\_\+}}
+\item 
+std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a538272c9f2a6a44bafd9b54fe613f575}{screen\+\_\+res\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{classDiceInvaders_1_1Alien}{Alien}} $>$ \mbox{\hyperlink{classDiceInvaders_1_1AlienList_ab3edde5a5bf1c7970c578b23b707b368}{aliens\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a212eacde79adc7c5e8e53eb151f54897}{T\+O\+T\+A\+L\+\_\+\+A\+L\+I\+E\+NS}} = 30
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a3320a8c6e2b1ae068b1a0cddef7795ca}{A\+L\+I\+E\+N\+S\+\_\+\+P\+E\+R\+\_\+\+R\+OW}} = 10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A doubly-\/linked list specifically used to manage \mbox{\hyperlink{classDiceInvaders_1_1Alien}{Alien}} objects. 
+
+The concept behind \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} is to provide and efficient way of managing the interaction between \mbox{\hyperlink{classDiceInvaders_1_1Alien}{Alien}} and \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} objects in game. \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} provides the interface for spawning alien and armies and updating game state based on collisions between aliens, rockets, players, and the boundaries of the game window. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a671625e2fd09c9b93543f7866ee0ad44}\label{classDiceInvaders_1_1AlienList_a671625e2fd09c9b93543f7866ee0ad44}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!AlienList@{AlienList}}
+\index{AlienList@{AlienList}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{AlienList()}{AlienList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Alien\+List\+::\+Alien\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} cannot be default constructed. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_ad0788635bcaf833956668ce2d1cdaabb}\label{classDiceInvaders_1_1AlienList_ad0788635bcaf833956668ce2d1cdaabb}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!AlienList@{AlienList}}
+\index{AlienList@{AlienList}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{AlienList()}{AlienList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Alien\+List\+::\+Alien\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$}]{alien\+\_\+sprite,  }\item[{I\+S\+Prite $\ast$}]{bomb\+\_\+sprite,  }\item[{const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&}]{screen\+\_\+res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a3416194a98fa8f502e3316edf82759f3}\label{classDiceInvaders_1_1AlienList_a3416194a98fa8f502e3316edf82759f3}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!AlienList@{AlienList}}
+\index{AlienList@{AlienList}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{AlienList()}{AlienList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Alien\+List\+::\+Alien\+List (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} \&}]{al }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} cannot be copy constructed. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_aac8af7c33ef7aff87d2142746e0c28f6}\label{classDiceInvaders_1_1AlienList_aac8af7c33ef7aff87d2142746e0c28f6}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!AlienList@{AlienList}}
+\index{AlienList@{AlienList}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{AlienList()}{AlienList()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Alien\+List\+::\+Alien\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} \&\&}]{al }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} does not support move semantics. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_ab8a6590706831c21b7354d40feec97ae}\label{classDiceInvaders_1_1AlienList_ab8a6590706831c21b7354d40feec97ae}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!````~AlienList@{$\sim$AlienList}}
+\index{````~AlienList@{$\sim$AlienList}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{$\sim$AlienList()}{~AlienList()}}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Alien\+List\+::$\sim$\+Alien\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} does not allocate resources that aren\textquotesingle{}t automatically managed. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_ac75324711e65f6821e51d775df047849}\label{classDiceInvaders_1_1AlienList_ac75324711e65f6821e51d775df047849}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!alien\_out\_of\_bounds@{alien\_out\_of\_bounds}}
+\index{alien\_out\_of\_bounds@{alien\_out\_of\_bounds}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{alien\_out\_of\_bounds()}{alien\_out\_of\_bounds()}}
+{\footnotesize\ttfamily bool Dice\+Invaders\+::\+Alien\+List\+::alien\+\_\+out\+\_\+of\+\_\+bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Determine whether any alien in \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} has stepped out of the game bounds. 
+
+\begin{DoxyReturn}{Returns}
+True if any alien in \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} stepped out of bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_ac578bbdaae22d08dfea348614f6dba81}\label{classDiceInvaders_1_1AlienList_ac578bbdaae22d08dfea348614f6dba81}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!has\_aliens@{has\_aliens}}
+\index{has\_aliens@{has\_aliens}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{has\_aliens()}{has\_aliens()}}
+{\footnotesize\ttfamily bool Dice\+Invaders\+::\+Alien\+List\+::has\+\_\+aliens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determine whether the \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} contains any aliens. 
+
+\begin{DoxyReturn}{Returns}
+True if the \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} has at least one alien. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_ae1e9acde55b31a3202bfef6570ec0892}\label{classDiceInvaders_1_1AlienList_ae1e9acde55b31a3202bfef6570ec0892}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!has\_collision@{has\_collision}}
+\index{has\_collision@{has\_collision}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{has\_collision()}{has\_collision()}}
+{\footnotesize\ttfamily bool Dice\+Invaders\+::\+Alien\+List\+::has\+\_\+collision (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&}]{pos1,  }\item[{const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&}]{pos2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determine whether there is a collision between {\ttfamily pos1} and {\ttfamily pos2}. 
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily pos1} and {\ttfamily pos2} collide. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a65027548391df3828f98b4ef5e9e4af1}\label{classDiceInvaders_1_1AlienList_a65027548391df3828f98b4ef5e9e4af1}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!operator=@{operator=}}
+\index{operator=@{operator=}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}}\& Dice\+Invaders\+::\+Alien\+List\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} \&}]{al }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} does not support assignment. 
+
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a5b3515ba95d9366262dc31edd84fb7c5}\label{classDiceInvaders_1_1AlienList_a5b3515ba95d9366262dc31edd84fb7c5}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!resolve\_collisions@{resolve\_collisions}}
+\index{resolve\_collisions@{resolve\_collisions}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{resolve\_collisions()}{resolve\_collisions()}}
+{\footnotesize\ttfamily void Dice\+Invaders\+::\+Alien\+List\+::resolve\+\_\+collisions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} $\ast$}]{player,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Resolve collisions if any between {\ttfamily player} and aliens in the \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}}. 
+
+\mbox{\hyperlink{classDiceInvaders_1_1AlienList_a5b3515ba95d9366262dc31edd84fb7c5}{resolve\+\_\+collisions()}} traverses the \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} and for each alien in the list it takes actions if (1) The alien hits the player. (2) The alien\textquotesingle{}s bomb hits the player. (3) The player\textquotesingle{}s rocket hits the alien. The goal is to \textquotesingle{}resolve\textquotesingle{} each of the above collision scenarios by updating player, alien, and \mbox{\hyperlink{classDiceInvaders_1_1AlienList}{Alien\+List}} state accordingly. 
+\begin{DoxyParams}{Parameters}
+{\em player} & A \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} object. \\
+\hline
+{\em direction} & The horizontal direction of the aliens (-\/1\+:left and 1\+:right). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a1faf3673b14d7ac9d8c24bab65ac2e76}\label{classDiceInvaders_1_1AlienList_a1faf3673b14d7ac9d8c24bab65ac2e76}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!spawn\_aliens@{spawn\_aliens}}
+\index{spawn\_aliens@{spawn\_aliens}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{spawn\_aliens()}{spawn\_aliens()}}
+{\footnotesize\ttfamily void Dice\+Invaders\+::\+Alien\+List\+::spawn\+\_\+aliens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Spawn an army of aliens. 
+
+spawn\+\_\+aliens creates \mbox{\hyperlink{classDiceInvaders_1_1AlienList_a212eacde79adc7c5e8e53eb151f54897}{T\+O\+T\+A\+L\+\_\+\+A\+L\+I\+E\+NS}} \mbox{\hyperlink{classDiceInvaders_1_1Alien}{Alien}} objects which are drawn on screen during the next game refresh cycle. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a2b7f4d29e2f085d05de77c8605b1b2b4}\label{classDiceInvaders_1_1AlienList_a2b7f4d29e2f085d05de77c8605b1b2b4}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!alien\_sprite\_@{alien\_sprite\_}}
+\index{alien\_sprite\_@{alien\_sprite\_}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{alien\_sprite\_}{alien\_sprite\_}}
+{\footnotesize\ttfamily I\+S\+Prite$\ast$ Dice\+Invaders\+::\+Alien\+List\+::alien\+\_\+sprite\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classDiceInvaders_1_1Alien}{Alien}} sprite. \mbox{\Hypertarget{classDiceInvaders_1_1AlienList_ab3edde5a5bf1c7970c578b23b707b368}\label{classDiceInvaders_1_1AlienList_ab3edde5a5bf1c7970c578b23b707b368}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!aliens\_@{aliens\_}}
+\index{aliens\_@{aliens\_}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{aliens\_}{aliens\_}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classDiceInvaders_1_1Alien}{Alien}}$>$ Dice\+Invaders\+::\+Alien\+List\+::aliens\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+List of \mbox{\hyperlink{classDiceInvaders_1_1Alien}{Alien}} objects forming the alien army. \mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a3320a8c6e2b1ae068b1a0cddef7795ca}\label{classDiceInvaders_1_1AlienList_a3320a8c6e2b1ae068b1a0cddef7795ca}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!ALIENS\_PER\_ROW@{ALIENS\_PER\_ROW}}
+\index{ALIENS\_PER\_ROW@{ALIENS\_PER\_ROW}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{ALIENS\_PER\_ROW}{ALIENS\_PER\_ROW}}
+{\footnotesize\ttfamily const uint32\+\_\+t Dice\+Invaders\+::\+Alien\+List\+::\+A\+L\+I\+E\+N\+S\+\_\+\+P\+E\+R\+\_\+\+R\+OW = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+The number of aliens that appear per row. \mbox{\Hypertarget{classDiceInvaders_1_1AlienList_aecf8ec7ccd660884fa901cbc19572254}\label{classDiceInvaders_1_1AlienList_aecf8ec7ccd660884fa901cbc19572254}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!bomb\_sprite\_@{bomb\_sprite\_}}
+\index{bomb\_sprite\_@{bomb\_sprite\_}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{bomb\_sprite\_}{bomb\_sprite\_}}
+{\footnotesize\ttfamily I\+S\+Prite$\ast$ Dice\+Invaders\+::\+Alien\+List\+::bomb\+\_\+sprite\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{classDiceInvaders_1_1Bomb}{Bomb}} sprite \mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a2cad14c7c24d581c38766ee94cfecc47}\label{classDiceInvaders_1_1AlienList_a2cad14c7c24d581c38766ee94cfecc47}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!engine\_@{engine\_}}
+\index{engine\_@{engine\_}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{engine\_}{engine\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}}$\ast$ Dice\+Invaders\+::\+Alien\+List\+::engine\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Game driver providing draw and elapsed time functionality. \mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a538272c9f2a6a44bafd9b54fe613f575}\label{classDiceInvaders_1_1AlienList_a538272c9f2a6a44bafd9b54fe613f575}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!screen\_res\_@{screen\_res\_}}
+\index{screen\_res\_@{screen\_res\_}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{screen\_res\_}{screen\_res\_}}
+{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$ Dice\+Invaders\+::\+Alien\+List\+::screen\+\_\+res\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Game screen resolution. \mbox{\Hypertarget{classDiceInvaders_1_1AlienList_a212eacde79adc7c5e8e53eb151f54897}\label{classDiceInvaders_1_1AlienList_a212eacde79adc7c5e8e53eb151f54897}} 
+\index{DiceInvaders::AlienList@{DiceInvaders::AlienList}!TOTAL\_ALIENS@{TOTAL\_ALIENS}}
+\index{TOTAL\_ALIENS@{TOTAL\_ALIENS}!DiceInvaders::AlienList@{DiceInvaders::AlienList}}
+\doxysubsubsection{\texorpdfstring{TOTAL\_ALIENS}{TOTAL\_ALIENS}}
+{\footnotesize\ttfamily const uint32\+\_\+t Dice\+Invaders\+::\+Alien\+List\+::\+T\+O\+T\+A\+L\+\_\+\+A\+L\+I\+E\+NS = 30\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+The maximum number of aliens that can be in game simultaneously. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+app/include/\mbox{\hyperlink{AlienList_8h}{Alien\+List.\+h}}\item 
+app/src/\mbox{\hyperlink{AlienList_8cc}{Alien\+List.\+cc}}\end{DoxyCompactItemize}
