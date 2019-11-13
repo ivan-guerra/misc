@@ -63,6 +63,6 @@ private:
     ISprite* bomb_sprite_; /*!< Bomb sprite. */
     std::pair<uint32_t,uint32_t> position_; /*!< Bomb position in 2D space. */
     double last_update_time_; /*!< Record of the game time during the last call to update(). */
-} // end Bomb
+}; // end Bomb
 
-}; // end DiceInvaders
+} // end DiceInvaders

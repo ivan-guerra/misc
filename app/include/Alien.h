@@ -33,7 +33,7 @@ public:
     /*!
      * \brief Alien does not support copy construction.
      */
-    Alien(const ALien& a) = delete;
+    Alien(const Alien& a) = delete;
 
     /*!
      * \brief Alien does not support move semantics.
@@ -74,13 +74,13 @@ public:
      * \brief Get the position of this alien's bomb in 2D space.
      * \return The position of this alien's bomb in 2D space.
      */
-    std::pair<uint32_t,uint32_t> bomb_position() const { return (bomb_) ? bomb_->position() : std::make_pair(0,0); }
+    std::pair<uint32_t,uint32_t> bomb_position() const { return (bomb_) ? bomb_->position() : std::make_pair((uint32_t)0,(uint32_t)0); }
 
     /*!
      * \brief Determine whether the alien has beyond the bounds of the screen.
      * \return True if the alien has moved beyond the left or right bound of the screen.
      */
-    bool out_of_bounds() const { return ((position.first > (screen_res_.first - 30.0)) || (position.first < 0)); }
+    bool out_of_bounds() const { return ((position_.first > (screen_res_.first - 30.0)) || (position_.first < 0)); }
 
     /*!
      * \brief Update the state of the Alien in game.
