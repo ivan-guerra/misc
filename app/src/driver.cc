@@ -19,7 +19,7 @@ int APIENTRY WinMain(
         int commandShow)
 {
     // Create engine
-    DiceInvadersLib lib("DiceInvaders.dll");
+    DiceInvadersLib lib("../lib/DiceInvaders.dll");
     IDiceInvaders* engine = lib.get();
 
     // Initialize the window
@@ -27,10 +27,10 @@ int APIENTRY WinMain(
     engine->init(screen_res.first, screen_res.second);
 
     // Create all sprites
-    ISprite* player_ship_sprite = engine->createSprite("data/player.bmp");
-    ISprite* alien_sprite = engine->createSprite("data/enemy1.bmp");
-    ISprite* rocket_sprite = engine->createSprite("data/rocket.bmp");
-    ISprite* bomb_sprite = engine->createSprite("data/bomb.bmp");
+    ISprite* player_ship_sprite = engine->createSprite("../data/player.bmp");
+    ISprite* alien_sprite = engine->createSprite("../data/enemy1.bmp");
+    ISprite* rocket_sprite = engine->createSprite("../data/rocket.bmp");
+    ISprite* bomb_sprite = engine->createSprite("../data/bomb.bmp");
 
     // Create player
     Playership* ship = new PlayerShip(engine, player_ship_sprite, rocket_sprite, screen_res);
