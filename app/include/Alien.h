@@ -5,7 +5,6 @@
 
 #pragma once
 
-#include <cstdint>
 #include <utility>
 #include "Bomb.h"
 
@@ -28,17 +27,11 @@ public:
     Alien() = delete;
 
     Alien(IDiceInvaders* engine, ISprite* alien_sprite, ISprite* bomb_sprite,
-            uint32_t hpos, uint32_t vpos, const std::pair<uint32_t,uint32_t>& screen_res);
+            int hpos, int vpos, const std::pair<int,int>& screen_res);
 
-    /*!
-     * \brief Alien does not support copy construction.
-     */
-    Alien(const Alien& a) = delete;
+    Alien(const Alien& a) = default;
 
-    /*!
-     * \brief Alien does not support move semantics.
-     */
-    Alien(Alien&& a) = delete;
+    Alien(Alien&& a) = default;
 
     /*!
      * \brief Clean up resources consumed by this Alien.
@@ -62,19 +55,19 @@ public:
     /*!
      * \brief Delete the active bomb if any.
      */
-    void delete_bomb() { delete bomb_; }
+    void delete_bomb() { delete bomb_; bomb_ = nullptr; }
 
     /*!
      * \brief Get the position of the alien in 2D space.
      * \return The position of the alien in 2D space.
      */
-    std::pair<uint32_t,uint32_t> position() const { return position_; }
+    std::pair<float,float> position() const { return position_; }
 
     /*!
      * \brief Get the position of this alien's bomb in 2D space.
      * \return The position of this alien's bomb in 2D space.
      */
-    std::pair<uint32_t,uint32_t> bomb_position() const { return (bomb_) ? bomb_->position() : std::make_pair((uint32_t)0,(uint32_t)0); }
+    std::pair<float,float> bomb_position() const { return (bomb_) ? bomb_->position() : std::make_pair(0.0f,0.0f); }
 
     /*!
      * \brief Determine whether the alien has beyond the bounds of the screen.
@@ -92,13 +85,13 @@ private:
     IDiceInvaders* engine_; /*!< Game driver providing draw and elapsed time functionality. */
     ISprite* alien_sprite_; /*!< Alien sprite. */
     ISprite* bomb_sprite_; /*!< Bomb sprite. */
-    std::pair<uint32_t,uint32_t> position_; /*!< Alien position in 2D space. */
-    std::pair<uint32_t,uint32_t> screen_res_; /*!< Game screen resolution. */
+    std::pair<float,float> position_; /*!< Alien position in 2D space. */
+    std::pair<int,int> screen_res_; /*!< Game screen resolution. */
 
     int prev_dir_; /*!< Record of the alien's horizontal direction (left/right). */
     int bomb_trigger_; /*!< Random integer used to decide when this alien will drop a bomb. */
-    double last_update_time_; /*!< Record of the game time during the last call to update(). */
-    double last_bomb_time_; /*!< Record of the game time during which the last bomb was dropped. */
+    float last_update_time_; /*!< Record of the game time during the last call to update(). */
+    float last_bomb_time_; /*!< Record of the game time during which the last bomb was dropped. */
     Bomb* bomb_; /*!< Pointer to this alien's bomb object. */
 }; // end Alien
 

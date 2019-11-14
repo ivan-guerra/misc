@@ -5,7 +5,6 @@
 
 #pragma once
 
-#include <cstdint>
 #include <utility>
 #include "DiceInvaders.h"
 
@@ -23,7 +22,7 @@ public:
      */
     Bomb() = delete;
 
-    Bomb(IDiceInvaders* engine, ISprite* bomb_sprite, const std::pair<uint32_t,uint32_t>& position);
+    Bomb(IDiceInvaders* engine, ISprite* bomb_sprite, const std::pair<float,float>& position);
 
     /*!
      * \brief Bomb cannot be copy constructed.
@@ -51,7 +50,7 @@ public:
      * \brief Get the position of the bomb in 2D space.
      * \return The position of the bomb in 2D space.
      */
-    std::pair<uint32_t,uint32_t> position() const { return position_; }
+    std::pair<float,float> position() const { return position_; }
 
     /*!
      * \brief Update the position of the bomb on screen.
@@ -61,8 +60,8 @@ public:
 private:
     IDiceInvaders* engine_; /*!< Game driver providing draw and elapsed time functionality. */
     ISprite* bomb_sprite_; /*!< Bomb sprite. */
-    std::pair<uint32_t,uint32_t> position_; /*!< Bomb position in 2D space. */
-    double last_update_time_; /*!< Record of the game time during the last call to update(). */
+    std::pair<float,float> position_; /*!< Bomb position in 2D space. */
+    float last_update_time_; /*!< Record of the game time during the last call to update(). */
 }; // end Bomb
 
 } // end DiceInvaders

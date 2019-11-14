@@ -1,5 +1,6 @@
 #include <cassert>
 #include <cstdio>
+#include <cstdint>
 #include <utility>
 #include <windows.h>
 
@@ -12,34 +13,37 @@
 const int WIDTH = 640;
 const int HEIGHT = 480;
 
+using namespace DiceInvaders;
+
 int APIENTRY WinMain(
         HINSTANCE instance,
         HINSTANCE previousInstance,
         LPSTR commandLine,
         int commandShow)
 {
-    // Create engine
+    // Create engine.
     DiceInvadersLib lib("../lib/DiceInvaders.dll");
     IDiceInvaders* engine = lib.get();
 
-    // Initialize the window
-    std::pair<uint32_t,uint32_t> screen_res() = std::make_pair(WIDTH, HEIGHT);
+    // Initialize the window.
+    std::pair<uint32_t,uint32_t> screen_res(WIDTH, HEIGHT);
     engine->init(screen_res.first, screen_res.second);
 
-    // Create all sprites
+    // Create all sprites.
     ISprite* player_ship_sprite = engine->createSprite("../data/player.bmp");
-    ISprite* alien_sprite = engine->createSprite("../data/enemy1.bmp");
+    ISprite* alien_sprite1 = engine->createSprite("../data/enemy1.bmp");
+    ISprite* alien_sprite2 = engine->createSprite("../data/enemy2.bmp");
     ISprite* rocket_sprite = engine->createSprite("../data/rocket.bmp");
     ISprite* bomb_sprite = engine->createSprite("../data/bomb.bmp");
 
-    // Create player
-    Playership* ship = new PlayerShip(engine, player_ship_sprite, rocket_sprite, screen_res);
+    // Create player ship.
+    PlayerShip* ship = new PlayerShip(engine, player_ship_sprite, rocket_sprite, screen_res);
 
-    // Creating enemies
-    AlienList aliens(engine, alien_sprite, bomb_sprite, screen_res);
+    // Create a list for storing aliens.
+    AlienList aliens(engine, alien_sprite1, alien_sprite2, bomb_sprite, screen_res);
     int direction = 1;
 
-    // While game is running
+    // Launch the game loop.
     while (engine->update()) {
         // Print the player score
         char buffer[50];
@@ -53,28 +57,28 @@ int APIENTRY WinMain(
         engine->drawText(WIDTH - 140, 30, "Health: ");
         engine->drawText(WIDTH - 80, 30, buffer);
 
-        // Create new enemies if they all are dead
+        // Create more aliens if all are dead.
         if (!aliens.has_aliens()) {
             direction = 1;
             aliens.spawn_aliens();
         }
 
-        // Update player
+        // Update player.
         ship->update();
 
-        // If enemy at border change direction
+        // If an alien has hit the border, change the alien direction.
         if(aliens.alien_out_of_bounds())
             direction = -direction;
 
-        // Update enemy and check all collisions
+        // Update aliens and resolve any possible collisions.
         aliens.resolve_collisions(ship, direction);
 
-        // If player is dead go to Game Over
+        // Ship's dead show the game over screen.
         if(ship->health() < 1)
             break;
     }
 
-    // Game Over Screen if player is dead
+    // Diplay a game over screen with the player's score.
     while (ship->health() < 1 && engine->update()) {
         char buffer[50];
         sprintf(buffer, "%d", ship->score());
@@ -83,16 +87,13 @@ int APIENTRY WinMain(
         engine->drawText(WIDTH/2 + 30, HEIGHT/2, buffer);
     }
 
-    // Delete player at end of game
+    // Release all active resources.
     delete ship;
-
-    // Destroy all sprites
     player_ship_sprite->destroy();
-    alien_sprite->destroy();
+    alien_sprite1->destroy();
+    alien_sprite2->destroy();
     rocket_sprite->destroy();
     bomb_sprite->destroy();
-
-    // Destroy game engine
     engine->destroy();
 
     return 0;

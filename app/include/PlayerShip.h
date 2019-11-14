@@ -8,7 +8,7 @@
 #include <cstdint>
 #include <utility>
 #include "Rocket.h"
-#include "DiveInvaders.h"
+#include "DiceInvaders.h"
 
 namespace DiceInvaders
 {
@@ -29,7 +29,8 @@ public:
      */
     PlayerShip() = delete;
 
-    PlayerShip(IDiceInvaders* engine, ISprite* ship_sprite, ISprite* rocket_sprite, const std::pair<uint32_t, uint32_t>& res);
+    PlayerShip(IDiceInvaders* engine, ISprite* ship_sprite,
+            ISprite* rocket_sprite, const std::pair<float, float>& res);
 
     /*!
      * \brief PlayerShip does not support copy construction.
@@ -57,38 +58,38 @@ public:
      * \brief Set the health points of this PlayerShip.
      * \param hp This PlayerShip's health points.
      */
-    void health(uint32_t hp) { health_points_ = hp; }
+    void health(int hp) { health_points_ = hp; }
 
     /*!
      * \brief Get this PlayerShip's health points.
      * \return This PlayerShip's health points.
      */
-    uint32_t health() const { return health_points_; }
+    int health() const { return health_points_; }
 
     /*!
      * \brief Set this PlayerShip's score.
      * \param score The PlayerShip's new score.
      */
-    void score(uint32_t score) { score_ = score; }
+    void score(int score) { score_ = score; }
 
     /*!
      * \brief Get this PlayerShip's score.
      * \return This PlayerShip's score.
      */
-    uint32_t score() const { return score_; }
+    int score() const { return score_; }
 
     /*!
      * \brief The position of this PlayerShip in 2D space.
      * \return The position of this PlayerShip in 2D space.
      */
-    std::pair<uint32_t,uint32_t> position() const { return position_; }
+    std::pair<int,int> position() const { return position_; }
 
     /*!
      * \brief The position of this PlayerShip's active rocket in 2D space.
      * \return The position of this PlayerShip's active rocket in 2D space. If
      *		   this PlayerShip has not fired a rocket, (0,0) is returned.
      */
-    std::pair<uint32_t,uint32_t> rocket_position() const { return (rocket_) ? rocket_->position() : std::make_pair(0,0); }
+    std::pair<float,float> rocket_position() const { return (rocket_) ? rocket_->position() : std::make_pair(0.0f,0.0f); }
 
     /*!
      * \brief Determine whether this PlayerShip has an active rocket.
@@ -99,7 +100,7 @@ public:
     /*!
      * \brief Delete this PlayerShip's active rocket.
      */
-    void delete_rocket() { delete rocket_; }
+    void delete_rocket() { delete rocket_; rocket_ = nullptr; }
 
     /*!
      * \brief Update the state of the PlayerShip in game.
@@ -118,16 +119,16 @@ private:
      */
     void kb_event_handler();
 
-    const static uint32_t DEFAULT_HEALTH = 3; /*!< Default PlayerShip health. */
+    const static int DEFAULT_HEALTH = 3; /*!< Default PlayerShip health. */
 
     IDiceInvaders* engine_; /*!< Game driver providing draw and elapsed time functionality. */
     ISprite* ship_sprite_; /*!< Ship sprite */
     ISprite* rocket_sprite_; /*!< Rocket sprite. */
-    std::pair<uint32_t,uint32_t> screen_res_; /*!< Game screen resolution. */
-    std::pair<uint32_t,uint32_t> position_; /*!< PlayerShip position in 2D space. */
-    uint32_t health_points_; /*!< PlayerShip health points. */
-    uint32_t score_; /*!< PlayerShip score representing number of aliens shot down. */
-    double last_update_time_; /*!< Record of the game time during the last call to update(). */
+    std::pair<int,int> screen_res_; /*!< Game screen resolution. */
+    std::pair<float,float> position_; /*!< PlayerShip position in 2D space. */
+    int health_points_; /*!< PlayerShip health points. */
+    int score_; /*!< PlayerShip score representing number of aliens shot down. */
+    float last_update_time_; /*!< Record of the game time during the last call to update(). */
     Rocket* rocket_; /*!< Pointer to this PlayerShip's active rocket. */
 }; // end PlayerShip
 

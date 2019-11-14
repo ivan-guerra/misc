@@ -9,9 +9,9 @@
 namespace DiceInvaders
 {
 Alien::Alien(IDiceInvaders* engine, ISprite* alien_sprite, ISprite* bomb_sprite,
-        uint32_t hpos, uint32_t vpos, const std::pair<uint32_t,uint32_t>& screen_res) :
+        int hpos, int vpos, const std::pair<int,int>& screen_res) :
     engine_(engine), alien_sprite_(alien_sprite), bomb_sprite_(bomb_sprite),
-    position_(std::make_pair(hpos*40+15, vpos*40+15)), screen_res_(screen_res),
+    position_(std::make_pair(hpos*40+15, vpos*40+55)), screen_res_(screen_res),
     prev_dir_(1), bomb_trigger_(rand() % 30 + 1), last_update_time_(engine_->getElapsedTime()),
     last_bomb_time_(engine_->getElapsedTime()), bomb_(nullptr)
 {
@@ -29,8 +29,8 @@ void Alien::update(int direction)
     alien_sprite_->draw(position_.first, position_.second);
 
     // Compute the alien's left/right move offset.
-    double curr_time = engine_->getElapsedTime();
-    double move = (curr_time - last_update_time_) * 360.0;
+    float curr_time = engine_->getElapsedTime();
+    float move = (curr_time - last_update_time_) * 160.0f;
     last_update_time_ = curr_time;
 
     // If we changed direction since the last update,
