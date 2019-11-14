@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dice Invaders: dice_invaders</title>
+<title>Dice Invaders: Dice Invaders</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,10 +63,27 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">dice_invaders </div>  </div>
+<div class="title">Dice Invaders </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>A Space Invaders clone using the DiceLA <a class="el" href="namespaceDiceInvaders.html">DiceInvaders</a> lib. </p>
+<div class="textblock"><p><img src="https://github.com/ivan-guerra/dice_invaders/blob/master/gameplay.PNG" alt="Dice Invaders" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Overview</h2>
+<p>Dice Invaders (DI) is a simplified version of the original Space Invaders game. DI uses the <a class="el" href="classDiceInvadersLib.html">DiceInvadersLib</a> provided by DiceLA to perform graphics related tasks (i.e., no external graphics libs are needed to build and run).</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Usage</h2>
+<p>It is important to note that <em>DI can only be built and run on a Windows PC</em>. To build, you need <a href="https://sourceforge.net/projects/mingw-w64/">MinGW</a> and <a href="https://cmake.org/download/">CMake</a> version 3.10 or greater. Follow the commands below to build DI from source. </p><div class="fragment"><div class="line">[user@host ~]$ git clone https://github.com/ivan-guerra/dice_invaders.git</div>
+<div class="line">[user@host ~]$ cd dice_invaders/</div>
+<div class="line">[user@host dice_invaders]$ mkdir build &amp;&amp; cd build</div>
+<div class="line">[user@host build]$ cmake .. -G &quot;MinGW Makefiles&quot; -DCMAKE_SH=&quot;CMAKE_SH-NOTFOUND&quot;</div>
+<div class="line">[user@host build]$ mingw32-make &amp;&amp; mingw32-make install</div>
+</div><!-- fragment --><p> If the build was successful, you should see a <code>bin/</code> directory under <code>dice_invaders/</code>. The commands below show how to run DI. </p><div class="fragment"><div class="line">[user@host build]$ cd ../bin</div>
+<div class="line">[user@host bin]$ invaders.exe</div>
+</div><!-- fragment --><p> If you have <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a> installed, you can build the project docs using the following command. </p><div class="fragment"><div class="line">[user@host super_word_search]$ doxygen doxygen_conf</div>
+</div><!-- fragment --><p> Alternatively, you can view the prebuilt docs by opening docs/html/index.html in your browser.</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+License</h2>
+<p>This software is licensed under the MIT Open Source license (see LICENSE file). </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

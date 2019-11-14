@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rocket_93',['Rocket',['../classDiceInvaders_1_1Rocket.html',1,'DiceInvaders']]]
+  ['rocket_95',['Rocket',['../classDiceInvaders_1_1Rocket.html',1,'DiceInvaders']]]
 ];

@@ -14,7 +14,7 @@ Represent the player\textquotesingle{}s space ship.
 \item 
 \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a4a6922e473fcbf3fa1681125e2a01239}{Player\+Ship}} ()=delete
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} cannot be default constructed. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a9dccf663a83fb33bb910f0dd9e370180}{Player\+Ship}} (\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$engine, \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$ship\+\_\+sprite, \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$rocket\+\_\+sprite, const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&res)
+\mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a4f14f5c4b08002e389b70c65ec780fa2}{Player\+Ship}} (\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$engine, \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$ship\+\_\+sprite, \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$rocket\+\_\+sprite, const std\+::pair$<$ float, float $>$ \&res)
 \item 
 \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a3f09a989f7cd48333222e0823471c56e}{Player\+Ship}} (const \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} \&ps)=delete
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} does not support copy construction. \end{DoxyCompactList}\item 
@@ -24,17 +24,17 @@ Represent the player\textquotesingle{}s space ship.
 \begin{DoxyCompactList}\small\item\em Clean up resources consumed by this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} \& \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_ab1f790be02725fba7fc92062972c0202}{operator=}} (const \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} ps)=delete
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} does not support assignment. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a04cce12b178f2411b08504641aba89a7}{health}} (uint32\+\_\+t hp)
+void \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_ae61080cc14c5a03364ab2df971118c31}{health}} (int hp)
 \begin{DoxyCompactList}\small\item\em Set the health points of this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a54c48f84e9290b429688f5b0aa7f1caa}{health}} () const
+int \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_ac8703c396a2eecfd0a8d651484d70914}{health}} () const
 \begin{DoxyCompactList}\small\item\em Get this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textquotesingle{}s health points. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a2af042ffdc25f210a2a415f732877095}{score}} (uint32\+\_\+t score)
+void \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_ae8d01730474e69bc17fccd2975d2e79b}{score}} (int score)
 \begin{DoxyCompactList}\small\item\em Set this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textquotesingle{}s score. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_acad11822761a098b7dd6b3d612248fb6}{score}} () const
+int \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a9ecae716d357632936eeae28274ed6d8}{score}} () const
 \begin{DoxyCompactList}\small\item\em Get this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textquotesingle{}s score. \end{DoxyCompactList}\item 
-std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_ad985203f0b7445a00a27d2aab48a89fe}{position}} () const
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a499fe7dd78e2e99ecbee4778d7d5f42c}{position}} () const
 \begin{DoxyCompactList}\small\item\em The position of this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} in 2D space. \end{DoxyCompactList}\item 
-std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a785cda50fe121c575b1417a48f6b0f86}{rocket\+\_\+position}} () const
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_af7722c80225197b5d8abfe06131357bb}{rocket\+\_\+position}} () const
 \begin{DoxyCompactList}\small\item\em The position of this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textquotesingle{}s active rocket in 2D space. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a68775b1105e7b66c246e404c058259f7}{has\+\_\+rocket}} () const
 \begin{DoxyCompactList}\small\item\em Determine whether this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} has an active rocket. \end{DoxyCompactList}\item 
@@ -56,22 +56,22 @@ void \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a6f1f8ec2bf449746699b8ca3d
 \item 
 \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_aada091addb5b65833fce1eac7c991a1e}{rocket\+\_\+sprite\+\_\+}}
 \item 
-std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_ae2f160cd56871c97fbd965cb68ab22a9}{screen\+\_\+res\+\_\+}}
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a721256b7654015543415e16123c0e5a9}{screen\+\_\+res\+\_\+}}
 \item 
-std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a07d19ce493bc31032182d8319efc6439}{position\+\_\+}}
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a2369fb1955f1d5f9e8821fe60aa56708}{position\+\_\+}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a58b39d25b5db511801ba3e5a68a1b1e8}{health\+\_\+points\+\_\+}}
+int \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_aebaf10d256babd457bf87c1edc538ef7}{health\+\_\+points\+\_\+}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_af9d39945e3c9cc3a9a151b522d6e9d3d}{score\+\_\+}}
+int \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a65a51847d84b9bce7c60c6e65ece8f7d}{score\+\_\+}}
 \item 
-double \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_af899b7c653c604b484ed25575db7ac1c}{last\+\_\+update\+\_\+time\+\_\+}}
+float \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_aa0fadc5c69a96b05fe642b991a45e7eb}{last\+\_\+update\+\_\+time\+\_\+}}
 \item 
 \mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} $\ast$ \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a61ec5ef2b91e2c77b69246fa4614f015}{rocket\+\_\+}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-const static uint32\+\_\+t \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a2f8aa7a872282bf64f2c061cfd7f3e19}{D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+E\+A\+L\+TH}} = 3
+const static int \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a90fd00c70243e07299f3947042d7f094}{D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+E\+A\+L\+TH}} = 3
 \end{DoxyCompactItemize}
 
 
@@ -91,11 +91,11 @@ Represent the player\textquotesingle{}s space ship.
 
 \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} cannot be default constructed. 
 
-\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a9dccf663a83fb33bb910f0dd9e370180}\label{classDiceInvaders_1_1PlayerShip_a9dccf663a83fb33bb910f0dd9e370180}} 
+\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a4f14f5c4b08002e389b70c65ec780fa2}\label{classDiceInvaders_1_1PlayerShip_a4f14f5c4b08002e389b70c65ec780fa2}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!PlayerShip@{PlayerShip}}
 \index{PlayerShip@{PlayerShip}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{PlayerShip()}{PlayerShip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily Dice\+Invaders\+::\+Player\+Ship\+::\+Player\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$}]{ship\+\_\+sprite,  }\item[{\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$}]{rocket\+\_\+sprite,  }\item[{const std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \&}]{res }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Dice\+Invaders\+::\+Player\+Ship\+::\+Player\+Ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$}]{ship\+\_\+sprite,  }\item[{\mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$}]{rocket\+\_\+sprite,  }\item[{const std\+::pair$<$ float, float $>$ \&}]{res }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a3f09a989f7cd48333222e0823471c56e}\label{classDiceInvaders_1_1PlayerShip_a3f09a989f7cd48333222e0823471c56e}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!PlayerShip@{PlayerShip}}
@@ -153,11 +153,11 @@ Determine whether this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\
 \begin{DoxyReturn}{Returns}
 True if the \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} has fired a rocket that is still active. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a54c48f84e9290b429688f5b0aa7f1caa}\label{classDiceInvaders_1_1PlayerShip_a54c48f84e9290b429688f5b0aa7f1caa}} 
+\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_ac8703c396a2eecfd0a8d651484d70914}\label{classDiceInvaders_1_1PlayerShip_ac8703c396a2eecfd0a8d651484d70914}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!health@{health}}
 \index{health@{health}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{health()}{health()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily uint32\+\_\+t Dice\+Invaders\+::\+Player\+Ship\+::health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily int Dice\+Invaders\+::\+Player\+Ship\+::health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -166,11 +166,11 @@ Get this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textqu
 \begin{DoxyReturn}{Returns}
 This \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textquotesingle{}s health points. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a04cce12b178f2411b08504641aba89a7}\label{classDiceInvaders_1_1PlayerShip_a04cce12b178f2411b08504641aba89a7}} 
+\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_ae61080cc14c5a03364ab2df971118c31}\label{classDiceInvaders_1_1PlayerShip_ae61080cc14c5a03364ab2df971118c31}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!health@{health}}
 \index{health@{health}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{health()}{health()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Dice\+Invaders\+::\+Player\+Ship\+::health (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{hp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Dice\+Invaders\+::\+Player\+Ship\+::health (\begin{DoxyParamCaption}\item[{int}]{hp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -201,11 +201,11 @@ Use player keystrokes to update the state of the \mbox{\hyperlink{classDiceInvad
 
 \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} does not support assignment. 
 
-\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_ad985203f0b7445a00a27d2aab48a89fe}\label{classDiceInvaders_1_1PlayerShip_ad985203f0b7445a00a27d2aab48a89fe}} 
+\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a499fe7dd78e2e99ecbee4778d7d5f42c}\label{classDiceInvaders_1_1PlayerShip_a499fe7dd78e2e99ecbee4778d7d5f42c}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!position@{position}}
 \index{position@{position}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{position()}{position()}}
-{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$ Dice\+Invaders\+::\+Player\+Ship\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::pair$<$int,int$>$ Dice\+Invaders\+::\+Player\+Ship\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -214,11 +214,11 @@ The position of this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+S
 \begin{DoxyReturn}{Returns}
 The position of this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} in 2D space. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a785cda50fe121c575b1417a48f6b0f86}\label{classDiceInvaders_1_1PlayerShip_a785cda50fe121c575b1417a48f6b0f86}} 
+\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_af7722c80225197b5d8abfe06131357bb}\label{classDiceInvaders_1_1PlayerShip_af7722c80225197b5d8abfe06131357bb}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!rocket\_position@{rocket\_position}}
 \index{rocket\_position@{rocket\_position}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{rocket\_position()}{rocket\_position()}}
-{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$ Dice\+Invaders\+::\+Player\+Ship\+::rocket\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily std\+::pair$<$float,float$>$ Dice\+Invaders\+::\+Player\+Ship\+::rocket\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -227,11 +227,11 @@ The position of this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+S
 \begin{DoxyReturn}{Returns}
 The position of this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textquotesingle{}s active rocket in 2D space. If this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} has not fired a rocket, (0,0) is returned. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_acad11822761a098b7dd6b3d612248fb6}\label{classDiceInvaders_1_1PlayerShip_acad11822761a098b7dd6b3d612248fb6}} 
+\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a9ecae716d357632936eeae28274ed6d8}\label{classDiceInvaders_1_1PlayerShip_a9ecae716d357632936eeae28274ed6d8}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!score@{score}}
 \index{score@{score}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{score()}{score()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily uint32\+\_\+t Dice\+Invaders\+::\+Player\+Ship\+::score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily int Dice\+Invaders\+::\+Player\+Ship\+::score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -240,11 +240,11 @@ Get this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textqu
 \begin{DoxyReturn}{Returns}
 This \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textquotesingle{}s score. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a2af042ffdc25f210a2a415f732877095}\label{classDiceInvaders_1_1PlayerShip_a2af042ffdc25f210a2a415f732877095}} 
+\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_ae8d01730474e69bc17fccd2975d2e79b}\label{classDiceInvaders_1_1PlayerShip_ae8d01730474e69bc17fccd2975d2e79b}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!score@{score}}
 \index{score@{score}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{score()}{score()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Dice\+Invaders\+::\+Player\+Ship\+::score (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Dice\+Invaders\+::\+Player\+Ship\+::score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -268,11 +268,11 @@ Update the state of the \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player
 \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a20064c2a1b664368d495adf3ef96d5fd}{update()}} will draw the ship in a location corresponding to the user\textquotesingle{}s last move keystrokes. Additionally, \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a20064c2a1b664368d495adf3ef96d5fd}{update()}} will manage the update of this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}\textquotesingle{}s rocket if any. 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a2f8aa7a872282bf64f2c061cfd7f3e19}\label{classDiceInvaders_1_1PlayerShip_a2f8aa7a872282bf64f2c061cfd7f3e19}} 
+\mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a90fd00c70243e07299f3947042d7f094}\label{classDiceInvaders_1_1PlayerShip_a90fd00c70243e07299f3947042d7f094}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!DEFAULT\_HEALTH@{DEFAULT\_HEALTH}}
 \index{DEFAULT\_HEALTH@{DEFAULT\_HEALTH}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{DEFAULT\_HEALTH}{DEFAULT\_HEALTH}}
-{\footnotesize\ttfamily const static uint32\+\_\+t Dice\+Invaders\+::\+Player\+Ship\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+E\+A\+L\+TH = 3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily const static int Dice\+Invaders\+::\+Player\+Ship\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+E\+A\+L\+TH = 3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 Default \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} health. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_abfb374724639c5d29ade426a03a2d98c}\label{classDiceInvaders_1_1PlayerShip_abfb374724639c5d29ade426a03a2d98c}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!engine\_@{engine\_}}
@@ -280,23 +280,23 @@ Default \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} health.
 \doxysubsubsection{\texorpdfstring{engine\_}{engine\_}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structIDiceInvaders}{I\+Dice\+Invaders}}$\ast$ Dice\+Invaders\+::\+Player\+Ship\+::engine\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-Game driver providing draw and elapsed time functionality. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a58b39d25b5db511801ba3e5a68a1b1e8}\label{classDiceInvaders_1_1PlayerShip_a58b39d25b5db511801ba3e5a68a1b1e8}} 
+Game driver providing draw and elapsed time functionality. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_aebaf10d256babd457bf87c1edc538ef7}\label{classDiceInvaders_1_1PlayerShip_aebaf10d256babd457bf87c1edc538ef7}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!health\_points\_@{health\_points\_}}
 \index{health\_points\_@{health\_points\_}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{health\_points\_}{health\_points\_}}
-{\footnotesize\ttfamily uint32\+\_\+t Dice\+Invaders\+::\+Player\+Ship\+::health\+\_\+points\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily int Dice\+Invaders\+::\+Player\+Ship\+::health\+\_\+points\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} health points. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_af899b7c653c604b484ed25575db7ac1c}\label{classDiceInvaders_1_1PlayerShip_af899b7c653c604b484ed25575db7ac1c}} 
+\mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} health points. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_aa0fadc5c69a96b05fe642b991a45e7eb}\label{classDiceInvaders_1_1PlayerShip_aa0fadc5c69a96b05fe642b991a45e7eb}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!last\_update\_time\_@{last\_update\_time\_}}
 \index{last\_update\_time\_@{last\_update\_time\_}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{last\_update\_time\_}{last\_update\_time\_}}
-{\footnotesize\ttfamily double Dice\+Invaders\+::\+Player\+Ship\+::last\+\_\+update\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily float Dice\+Invaders\+::\+Player\+Ship\+::last\+\_\+update\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-Record of the game time during the last call to \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a20064c2a1b664368d495adf3ef96d5fd}{update()}}. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a07d19ce493bc31032182d8319efc6439}\label{classDiceInvaders_1_1PlayerShip_a07d19ce493bc31032182d8319efc6439}} 
+Record of the game time during the last call to \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip_a20064c2a1b664368d495adf3ef96d5fd}{update()}}. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a2369fb1955f1d5f9e8821fe60aa56708}\label{classDiceInvaders_1_1PlayerShip_a2369fb1955f1d5f9e8821fe60aa56708}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!position\_@{position\_}}
 \index{position\_@{position\_}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{position\_}{position\_}}
-{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$ Dice\+Invaders\+::\+Player\+Ship\+::position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::pair$<$float,float$>$ Dice\+Invaders\+::\+Player\+Ship\+::position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} position in 2D space. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a61ec5ef2b91e2c77b69246fa4614f015}\label{classDiceInvaders_1_1PlayerShip_a61ec5ef2b91e2c77b69246fa4614f015}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!rocket\_@{rocket\_}}
@@ -310,17 +310,17 @@ Pointer to this \mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}}
 \doxysubsubsection{\texorpdfstring{rocket\_sprite\_}{rocket\_sprite\_}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structISprite}{I\+Sprite}}$\ast$ Dice\+Invaders\+::\+Player\+Ship\+::rocket\+\_\+sprite\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} sprite. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_af9d39945e3c9cc3a9a151b522d6e9d3d}\label{classDiceInvaders_1_1PlayerShip_af9d39945e3c9cc3a9a151b522d6e9d3d}} 
+\mbox{\hyperlink{classDiceInvaders_1_1Rocket}{Rocket}} sprite. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a65a51847d84b9bce7c60c6e65ece8f7d}\label{classDiceInvaders_1_1PlayerShip_a65a51847d84b9bce7c60c6e65ece8f7d}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!score\_@{score\_}}
 \index{score\_@{score\_}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{score\_}{score\_}}
-{\footnotesize\ttfamily uint32\+\_\+t Dice\+Invaders\+::\+Player\+Ship\+::score\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily int Dice\+Invaders\+::\+Player\+Ship\+::score\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} score representing number of aliens shot down. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_ae2f160cd56871c97fbd965cb68ab22a9}\label{classDiceInvaders_1_1PlayerShip_ae2f160cd56871c97fbd965cb68ab22a9}} 
+\mbox{\hyperlink{classDiceInvaders_1_1PlayerShip}{Player\+Ship}} score representing number of aliens shot down. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a721256b7654015543415e16123c0e5a9}\label{classDiceInvaders_1_1PlayerShip_a721256b7654015543415e16123c0e5a9}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!screen\_res\_@{screen\_res\_}}
 \index{screen\_res\_@{screen\_res\_}!DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}}
 \doxysubsubsection{\texorpdfstring{screen\_res\_}{screen\_res\_}}
-{\footnotesize\ttfamily std\+::pair$<$uint32\+\_\+t,uint32\+\_\+t$>$ Dice\+Invaders\+::\+Player\+Ship\+::screen\+\_\+res\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::pair$<$int,int$>$ Dice\+Invaders\+::\+Player\+Ship\+::screen\+\_\+res\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 Game screen resolution. \mbox{\Hypertarget{classDiceInvaders_1_1PlayerShip_a0730220753cbdaafb7aa7a26d6bacc4b}\label{classDiceInvaders_1_1PlayerShip_a0730220753cbdaafb7aa7a26d6bacc4b}} 
 \index{DiceInvaders::PlayerShip@{DiceInvaders::PlayerShip}!ship\_sprite\_@{ship\_sprite\_}}

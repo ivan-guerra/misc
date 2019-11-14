@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['idiceinvaders_89',['IDiceInvaders',['../structIDiceInvaders.html',1,'']]],
-  ['isprite_90',['ISprite',['../structISprite.html',1,'']]]
+  ['idiceinvaders_91',['IDiceInvaders',['../structIDiceInvaders.html',1,'']]],
+  ['isprite_92',['ISprite',['../structISprite.html',1,'']]]
 ];

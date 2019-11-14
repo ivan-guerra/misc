@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['diceinvaderslib_88',['DiceInvadersLib',['../classDiceInvadersLib.html',1,'']]]
+  ['diceinvaderslib_90',['DiceInvadersLib',['../classDiceInvadersLib.html',1,'']]]
 ];

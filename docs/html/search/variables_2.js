@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['default_5fhealth_154',['DEFAULT_HEALTH',['../classDiceInvaders_1_1PlayerShip.html#a2f8aa7a872282bf64f2c061cfd7f3e19',1,'DiceInvaders::PlayerShip']]]
+  ['default_5fhealth_158',['DEFAULT_HEALTH',['../classDiceInvaders_1_1PlayerShip.html#a90fd00c70243e07299f3947042d7f094',1,'DiceInvaders::PlayerShip']]]
 ];

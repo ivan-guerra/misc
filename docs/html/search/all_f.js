@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['score_70',['score',['../classDiceInvaders_1_1PlayerShip.html#a2af042ffdc25f210a2a415f732877095',1,'DiceInvaders::PlayerShip::score(uint32_t score)'],['../classDiceInvaders_1_1PlayerShip.html#acad11822761a098b7dd6b3d612248fb6',1,'DiceInvaders::PlayerShip::score() const']]],
-  ['score_5f_71',['score_',['../classDiceInvaders_1_1PlayerShip.html#af9d39945e3c9cc3a9a151b522d6e9d3d',1,'DiceInvaders::PlayerShip']]],
-  ['screen_5fres_5f_72',['screen_res_',['../classDiceInvaders_1_1Alien.html#a0670765da36152f8bd0015bc99d97f7e',1,'DiceInvaders::Alien::screen_res_()'],['../classDiceInvaders_1_1AlienList.html#a538272c9f2a6a44bafd9b54fe613f575',1,'DiceInvaders::AlienList::screen_res_()'],['../classDiceInvaders_1_1PlayerShip.html#ae2f160cd56871c97fbd965cb68ab22a9',1,'DiceInvaders::PlayerShip::screen_res_()']]],
-  ['ship_5fsprite_5f_73',['ship_sprite_',['../classDiceInvaders_1_1PlayerShip.html#a0730220753cbdaafb7aa7a26d6bacc4b',1,'DiceInvaders::PlayerShip']]],
-  ['spawn_5faliens_74',['spawn_aliens',['../classDiceInvaders_1_1AlienList.html#a1faf3673b14d7ac9d8c24bab65ac2e76',1,'DiceInvaders::AlienList']]]
+  ['score_72',['score',['../classDiceInvaders_1_1PlayerShip.html#ae8d01730474e69bc17fccd2975d2e79b',1,'DiceInvaders::PlayerShip::score(int score)'],['../classDiceInvaders_1_1PlayerShip.html#a9ecae716d357632936eeae28274ed6d8',1,'DiceInvaders::PlayerShip::score() const']]],
+  ['score_5f_73',['score_',['../classDiceInvaders_1_1PlayerShip.html#a65a51847d84b9bce7c60c6e65ece8f7d',1,'DiceInvaders::PlayerShip']]],
+  ['screen_5fres_5f_74',['screen_res_',['../classDiceInvaders_1_1Alien.html#ab0d005be39c2f3d5a2b92aceff4297d4',1,'DiceInvaders::Alien::screen_res_()'],['../classDiceInvaders_1_1AlienList.html#a161ab8936d67721813f8ae30fec96700',1,'DiceInvaders::AlienList::screen_res_()'],['../classDiceInvaders_1_1PlayerShip.html#a721256b7654015543415e16123c0e5a9',1,'DiceInvaders::PlayerShip::screen_res_()']]],
+  ['ship_5fsprite_5f_75',['ship_sprite_',['../classDiceInvaders_1_1PlayerShip.html#a0730220753cbdaafb7aa7a26d6bacc4b',1,'DiceInvaders::PlayerShip']]],
+  ['spawn_5faliens_76',['spawn_aliens',['../classDiceInvaders_1_1AlienList.html#a1faf3673b14d7ac9d8c24bab65ac2e76',1,'DiceInvaders::AlienList']]]
 ];
