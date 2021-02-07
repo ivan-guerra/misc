@@ -1,0 +1,78 @@
+\hypertarget{structIDiceInvaders}{}\doxysection{I\+Dice\+Invaders Struct Reference}
+\label{structIDiceInvaders}\index{IDiceInvaders@{IDiceInvaders}}
+
+
+{\ttfamily \#include $<$Dice\+Invaders.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structIDiceInvaders_1_1KeyStatus}{Key\+Status}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structIDiceInvaders_a6090a092dab729f8571316d9c94e0bef}{destroy}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{structIDiceInvaders_a5c5a5752fbdcba807566b48082c45368}{init}} (int width, int height)=0
+\item 
+virtual bool \mbox{\hyperlink{structIDiceInvaders_a9b3854d927db259ebac8c1fc7713c635}{update}} ()=0
+\item 
+virtual \mbox{\hyperlink{structISprite}{I\+Sprite}} $\ast$ \mbox{\hyperlink{structIDiceInvaders_aa97a4dab34736c52835cefd2dcf0935e}{create\+Sprite}} (const char $\ast$name)=0
+\item 
+virtual void \mbox{\hyperlink{structIDiceInvaders_a1515e29e6ce09a1460eaaca70d53cb25}{draw\+Text}} (int x, int y, const char $\ast$msg)=0
+\item 
+virtual float \mbox{\hyperlink{structIDiceInvaders_a2438583a6d7cd56b992835ef4095b3fc}{get\+Elapsed\+Time}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structIDiceInvaders_a1aefdf62867641ed7cfdf14bd17d2f78}{get\+Key\+Status}} (\mbox{\hyperlink{structIDiceInvaders_1_1KeyStatus}{Key\+Status}} \&keys)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structIDiceInvaders_aa97a4dab34736c52835cefd2dcf0935e}\label{structIDiceInvaders_aa97a4dab34736c52835cefd2dcf0935e}} 
+\index{IDiceInvaders@{IDiceInvaders}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!IDiceInvaders@{IDiceInvaders}}
+\doxysubsubsection{\texorpdfstring{createSprite()}{createSprite()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structISprite}{I\+Sprite}}$\ast$ I\+Dice\+Invaders\+::create\+Sprite (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structIDiceInvaders_a6090a092dab729f8571316d9c94e0bef}\label{structIDiceInvaders_a6090a092dab729f8571316d9c94e0bef}} 
+\index{IDiceInvaders@{IDiceInvaders}!destroy@{destroy}}
+\index{destroy@{destroy}!IDiceInvaders@{IDiceInvaders}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily virtual void I\+Dice\+Invaders\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structIDiceInvaders_a1515e29e6ce09a1460eaaca70d53cb25}\label{structIDiceInvaders_a1515e29e6ce09a1460eaaca70d53cb25}} 
+\index{IDiceInvaders@{IDiceInvaders}!drawText@{drawText}}
+\index{drawText@{drawText}!IDiceInvaders@{IDiceInvaders}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily virtual void I\+Dice\+Invaders\+::draw\+Text (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structIDiceInvaders_a2438583a6d7cd56b992835ef4095b3fc}\label{structIDiceInvaders_a2438583a6d7cd56b992835ef4095b3fc}} 
+\index{IDiceInvaders@{IDiceInvaders}!getElapsedTime@{getElapsedTime}}
+\index{getElapsedTime@{getElapsedTime}!IDiceInvaders@{IDiceInvaders}}
+\doxysubsubsection{\texorpdfstring{getElapsedTime()}{getElapsedTime()}}
+{\footnotesize\ttfamily virtual float I\+Dice\+Invaders\+::get\+Elapsed\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structIDiceInvaders_a1aefdf62867641ed7cfdf14bd17d2f78}\label{structIDiceInvaders_a1aefdf62867641ed7cfdf14bd17d2f78}} 
+\index{IDiceInvaders@{IDiceInvaders}!getKeyStatus@{getKeyStatus}}
+\index{getKeyStatus@{getKeyStatus}!IDiceInvaders@{IDiceInvaders}}
+\doxysubsubsection{\texorpdfstring{getKeyStatus()}{getKeyStatus()}}
+{\footnotesize\ttfamily virtual void I\+Dice\+Invaders\+::get\+Key\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structIDiceInvaders_1_1KeyStatus}{Key\+Status}} \&}]{keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structIDiceInvaders_a5c5a5752fbdcba807566b48082c45368}\label{structIDiceInvaders_a5c5a5752fbdcba807566b48082c45368}} 
+\index{IDiceInvaders@{IDiceInvaders}!init@{init}}
+\index{init@{init}!IDiceInvaders@{IDiceInvaders}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool I\+Dice\+Invaders\+::init (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{structIDiceInvaders_a9b3854d927db259ebac8c1fc7713c635}\label{structIDiceInvaders_a9b3854d927db259ebac8c1fc7713c635}} 
+\index{IDiceInvaders@{IDiceInvaders}!update@{update}}
+\index{update@{update}!IDiceInvaders@{IDiceInvaders}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual bool I\+Dice\+Invaders\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/include/\mbox{\hyperlink{DiceInvaders_8h}{Dice\+Invaders.\+h}}\end{DoxyCompactItemize}

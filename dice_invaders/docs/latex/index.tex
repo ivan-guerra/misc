@@ -1,0 +1,21 @@
+\hypertarget{index_autotoc_md1}{}\doxysubsection{Overview}\label{index_autotoc_md1}
+Dice Invaders (DI) is a simplified version of the original Space Invaders game. DI uses the \mbox{\hyperlink{classDiceInvadersLib}{Dice\+Invaders\+Lib}} provided by Dice\+LA to perform graphics related tasks (i.\+e., no external graphics libs are needed to build and run).\hypertarget{index_autotoc_md2}{}\doxysubsection{Usage}\label{index_autotoc_md2}
+It is important to note that {\itshape DI can only be built and run on a Windows PC}. To build, you need \href{https://sourceforge.net/projects/mingw-w64/}{\texttt{ Min\+GW}} and \href{https://cmake.org/download/}{\texttt{ C\+Make}} version 3.\+10 or greater. Follow the commands below to build DI from source. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[user@host ~]\$ git clone https://github.com/ivan-\/guerra/dice\_invaders.git}
+\DoxyCodeLine{[user@host ~]\$ cd dice\_invaders/}
+\DoxyCodeLine{[user@host dice\_invaders]\$ mkdir build \&\& cd build}
+\DoxyCodeLine{[user@host build]\$ cmake .. -\/G "MinGW Makefiles" -\/DCMAKE\_SH="CMAKE\_SH-\/NOTFOUND"}
+\DoxyCodeLine{[user@host build]\$ mingw32-\/make \&\& mingw32-\/make install}
+\end{DoxyCode}
+ If the build was successful, you should see a {\ttfamily bin/} directory under {\ttfamily dice\+\_\+invaders/}. The commands below show how to run DI. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[user@host build]\$ cd ../bin}
+\DoxyCodeLine{[user@host bin]\$ invaders.exe}
+\end{DoxyCode}
+ If you have \href{http://www.stack.nl/~dimitri/doxygen/}{\texttt{ Doxygen}} installed, you can build the project docs using the following command. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[user@host super\_word\_search]\$ doxygen doxygen\_conf}
+\end{DoxyCode}
+ Alternatively, you can view the prebuilt docs by opening docs/html/index.\+html in your browser.\hypertarget{index_autotoc_md3}{}\doxysubsection{License}\label{index_autotoc_md3}
+This software is licensed under the M\+IT Open Source license (see L\+I\+C\+E\+N\+SE file). 
