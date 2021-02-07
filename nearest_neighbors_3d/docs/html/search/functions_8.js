@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['threednode_56',['ThreeDNode',['../structnnalgo_1_1ThreeDTree_1_1ThreeDNode.html#a693b59ff6544e81a01e966789372a029',1,'nnalgo::ThreeDTree::ThreeDNode::ThreeDNode()'],['../structnnalgo_1_1ThreeDTree_1_1ThreeDNode.html#acb3d57b38db13d30aed4f0c57bb00926',1,'nnalgo::ThreeDTree::ThreeDNode::ThreeDNode(const ThreeDPoint &amp;location, ThreeDNode *left=nullptr, ThreeDNode *right=nullptr)']]],
+  ['threedpoint_57',['ThreeDPoint',['../structnnalgo_1_1ThreeDPoint.html#af4655d80a433e1090363b713fe61b851',1,'nnalgo::ThreeDPoint::ThreeDPoint()'],['../structnnalgo_1_1ThreeDPoint.html#a0a5a40884702df34c1e5d861929259c6',1,'nnalgo::ThreeDPoint::ThreeDPoint(unsigned id, double x, double y, double z)']]],
+  ['threedtree_58',['ThreeDTree',['../classnnalgo_1_1ThreeDTree.html#af336fcde4b7974feba62b41034635f09',1,'nnalgo::ThreeDTree::ThreeDTree()=delete'],['../classnnalgo_1_1ThreeDTree.html#ad558f5a67684c8732334ef9ae263c2e6',1,'nnalgo::ThreeDTree::ThreeDTree(std::vector&lt; ThreeDPoint &gt; &amp;coords)'],['../classnnalgo_1_1ThreeDTree.html#a846fe8b7156f9526b93eaafeeed9b9d9',1,'nnalgo::ThreeDTree::ThreeDTree(const ThreeDTree &amp;tree)=delete'],['../classnnalgo_1_1ThreeDTree.html#a1c44778b74f29fe4c7bc8794a1f26931',1,'nnalgo::ThreeDTree::ThreeDTree(ThreeDTree &amp;&amp;tree)=delete']]]
+];

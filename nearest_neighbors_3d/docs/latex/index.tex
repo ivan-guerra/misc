@@ -1,0 +1,53 @@
+\hypertarget{index_autotoc_md1}{}\doxysubsection{Overview}\label{index_autotoc_md1}
+Nearest Neighbors 3D (N\+N3D) is a program for finding the nearest neighbors of a set of points within 3D space given a search radius. N\+N3D uses a static, balanced 3-\/D Tree to perform spatial searches on large sets of points.\hypertarget{index_autotoc_md2}{}\doxysubsection{Input/\+Output Format}\label{index_autotoc_md2}
+N\+N3D prompts for two key inputs\+: the path to a text file containing the set of points and a double precision search radius. The format of the text file is shown below 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{num\_points}
+\DoxyCodeLine{x y z}
+\DoxyCodeLine{x y z}
+\DoxyCodeLine{. . .}
+\DoxyCodeLine{x y z}
+\end{DoxyCode}
+ At the top of the file is the number of points to load. Each subsequent line contains a 3D point represented by 3 double precision values seperated by whitespace.
+
+N\+N3D outputs its results to the console. For each point that was ingested, it will output the results of the search as 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{point\_id:[num\_neighbors | neighbor\_id(s)]}
+\end{DoxyCode}
+ Note that point I\+Ds range from 1 to n where the first point has ID 1, second point ID 2, etc. Example input and output are given below.
+
+Suppose we want to find all neighbors within a radius of 1.\+0 for all the points in the following input file. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3}
+\DoxyCodeLine{0 0 0}
+\DoxyCodeLine{0 0 1}
+\DoxyCodeLine{0.5 0.5 0.5}
+\end{DoxyCode}
+ N\+N3D would compute N\+Ns for each point within a 1.\+0 radius and print the following to stdout\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Start Search Results -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\DoxyCodeLine{1:[ 2 | 2 3 ]}
+\DoxyCodeLine{2:[ 2 | 3 1 ]}
+\DoxyCodeLine{3:[ 2 | 2 1 ]}
+\DoxyCodeLine{-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ End Search Results -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{Usage}\label{index_autotoc_md3}
+To compile, you need a {\bfseries{C++ compiler supporting C++14 features}} and {\bfseries{C\+Make version 3.\+10 or higher}}. Follow the commands below to download and build the source. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[host ~]\$ git clone https://github.com/ivan-\/guerra/nearest\_neighbors\_3d.git}
+\DoxyCodeLine{[host ~]\$ cd nearest\_neighbors\_3d}
+\DoxyCodeLine{[host nearest\_neighbors\_3d]\$ mkdir build \&\& cd build}
+\DoxyCodeLine{[host build]\$ cmake .. \&\& make \&\& make install}
+\end{DoxyCode}
+ If the build was successful, you should see a bin/ directory under nearest\+\_\+neighbors\+\_\+3d/. The commands below outline how to run the application as well as the unit tests. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[host build]\$ cd ../bin}
+\DoxyCodeLine{[host bin]\$ ./nearest\_neighbors}
+\DoxyCodeLine{[host bin]\$ ./nearest\_neighbors\_test}
+\end{DoxyCode}
+ If you have \href{http://www.stack.nl/~dimitri/doxygen/}{\texttt{ Doxygen}} installed, you can build the project docs using the following command. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[host nearest\_neighbors\_3d]\$ doxygen doxygen\_conf}
+\end{DoxyCode}
+ Alternatively, you can view the prebuilt docs by opening docs/html/index.\+html in your browser.\hypertarget{index_autotoc_md4}{}\doxysubsection{License}\label{index_autotoc_md4}
+This software is licensed under the M\+IT Open Source license (see L\+I\+C\+E\+N\+SE file). 

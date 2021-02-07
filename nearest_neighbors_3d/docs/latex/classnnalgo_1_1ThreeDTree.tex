@@ -1,0 +1,290 @@
+\hypertarget{classnnalgo_1_1ThreeDTree}{}\doxysection{nnalgo\+::Three\+D\+Tree Class Reference}
+\label{classnnalgo_1_1ThreeDTree}\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+
+
+Declare the interface for a simplified k-\/d tree where k equals 3.  
+
+
+
+
+{\ttfamily \#include $<$3d\+\_\+tree.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}}
+\begin{DoxyCompactList}\small\item\em Representation of a node within the 3-\/d tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree_af336fcde4b7974feba62b41034635f09}{Three\+D\+Tree}} ()=delete
+\begin{DoxyCompactList}\small\item\em Three\+D\+Trees cannot be default constructed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree_ad558f5a67684c8732334ef9ae263c2e6}{Three\+D\+Tree}} (std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&coords)
+\begin{DoxyCompactList}\small\item\em Construct a balanced \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} containing the points in {\ttfamily coords}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a846fe8b7156f9526b93eaafeeed9b9d9}{Three\+D\+Tree}} (const \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} \&tree)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} is not copy constructable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a1c44778b74f29fe4c7bc8794a1f26931}{Three\+D\+Tree}} (\mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} \&\&tree)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} does not support move semantics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a6859fad209c6023f05a0b9a47ac7e3b4}{$\sim$\+Three\+D\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Recursively delete the \mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} objects that form this tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} \& \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a5ee838827b4f1b602845dfc94d064e70}{operator=}} (const \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} \&tree)=delete
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} does not support assignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_acd7be01b8635aa74b5e0ce20e6e53c5d}{print\+\_\+tree}} () const
+\begin{DoxyCompactList}\small\item\em Print the coordinates stored in this tree using an inorder traversal pattern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a71ccce863cd91782ec93e9c753b034e4}{radial\+\_\+search}} (const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&ref, double rad, std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&neighbors) const
+\begin{DoxyCompactList}\small\item\em Find all the neighbors of {\ttfamily ref} within a search radius of size {\ttfamily rad}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_ab5704363243192ebdee342518d45c2f4}{find\+\_\+median\+\_\+on\+\_\+axis}} (int l, int r, int depth, std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&coords)
+\begin{DoxyCompactList}\small\item\em Find the index in {\ttfamily coords} of the median element on the current search axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} $\ast$ \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a30b9c78d2459fc69352e3609e081c7a7}{construct\+\_\+tree}} (int l, int r, int depth, std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&coords)
+\begin{DoxyCompactList}\small\item\em Recursively construct a 3-\/d tree containing all points in {\ttfamily coords}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_af64a01cc94b4710e39200435d8d4ef2c}{destruct\+\_\+tree}} (\mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} $\ast$root)
+\begin{DoxyCompactList}\small\item\em Recursively destruct the 3-\/d tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_ae73393a7f2701f583240b3cd75d066f4}{print\+\_\+tree}} (\mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} $\ast$root) const
+\begin{DoxyCompactList}\small\item\em Helper method used by the public \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_acd7be01b8635aa74b5e0ce20e6e53c5d}{print\+\_\+tree()}} to recrusively print the inorder traversal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_af925798f2f81f8ba103eedf53997cc09}{distance\+\_\+squared}} (const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&a, const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&b) const
+\begin{DoxyCompactList}\small\item\em Compute the square of the distance between two points in 3D space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a1eefdd343be5c532f2c200706caa55df}{radial\+\_\+search\+\_\+}} (\mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} $\ast$root, const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&ref, double rad, std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&neighbors, int depth) const
+\begin{DoxyCompactList}\small\item\em Helper method used by the public \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a71ccce863cd91782ec93e9c753b034e4}{radial\+\_\+search()}} to find all neighbors of {\ttfamily ref} within {\ttfamily rad}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} $\ast$ \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a0561db464876f5a1f66a96238cb5d38c}{root\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declare the interface for a simplified k-\/d tree where k equals 3. 
+
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} exposes an interface which allows the user to\+: (1) Construct a balanced, static 3-\/d tree from of a set points in 3D space. (2) Perform radial queries (i.\+e., find all points within a specific radius of a reference point). (3) Print the inorder traversal of the tree. The tree itself is recursively defined. Operations such as tree construction and radial searches are performed recursively and therefore make heavy use of the call stack. However, the tree is guaranteed to be balanced and therefore have a depth of no more than O(logn). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_af336fcde4b7974feba62b41034635f09}\label{classnnalgo_1_1ThreeDTree_af336fcde4b7974feba62b41034635f09}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!ThreeDTree@{ThreeDTree}}
+\index{ThreeDTree@{ThreeDTree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{ThreeDTree()}{ThreeDTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily nnalgo\+::\+Three\+D\+Tree\+::\+Three\+D\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Three\+D\+Trees cannot be default constructed. 
+
+Three\+D\+Trees can only be constructed from a set of Three\+D\+Points. \mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_ad558f5a67684c8732334ef9ae263c2e6}\label{classnnalgo_1_1ThreeDTree_ad558f5a67684c8732334ef9ae263c2e6}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!ThreeDTree@{ThreeDTree}}
+\index{ThreeDTree@{ThreeDTree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{ThreeDTree()}{ThreeDTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily nnalgo\+::\+Three\+D\+Tree\+::\+Three\+D\+Tree (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&}]{coords }\end{DoxyParamCaption})}
+
+
+
+Construct a balanced \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} containing the points in {\ttfamily coords}. 
+
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} does not guarantee the order of the elements in {\ttfamily coords} will be the same after a call to the \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} constructor. 
+\begin{DoxyParams}{Parameters}
+{\em coords} & A vector of unique \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} objects. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_a846fe8b7156f9526b93eaafeeed9b9d9}\label{classnnalgo_1_1ThreeDTree_a846fe8b7156f9526b93eaafeeed9b9d9}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!ThreeDTree@{ThreeDTree}}
+\index{ThreeDTree@{ThreeDTree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{ThreeDTree()}{ThreeDTree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily nnalgo\+::\+Three\+D\+Tree\+::\+Three\+D\+Tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} \&}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} is not copy constructable. 
+
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_a1c44778b74f29fe4c7bc8794a1f26931}\label{classnnalgo_1_1ThreeDTree_a1c44778b74f29fe4c7bc8794a1f26931}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!ThreeDTree@{ThreeDTree}}
+\index{ThreeDTree@{ThreeDTree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{ThreeDTree()}{ThreeDTree()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily nnalgo\+::\+Three\+D\+Tree\+::\+Three\+D\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} \&\&}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} does not support move semantics. 
+
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_a6859fad209c6023f05a0b9a47ac7e3b4}\label{classnnalgo_1_1ThreeDTree_a6859fad209c6023f05a0b9a47ac7e3b4}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!````~ThreeDTree@{$\sim$ThreeDTree}}
+\index{````~ThreeDTree@{$\sim$ThreeDTree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{$\sim$ThreeDTree()}{~ThreeDTree()}}
+{\footnotesize\ttfamily nnalgo\+::\+Three\+D\+Tree\+::$\sim$\+Three\+D\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recursively delete the \mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} objects that form this tree. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_a30b9c78d2459fc69352e3609e081c7a7}\label{classnnalgo_1_1ThreeDTree_a30b9c78d2459fc69352e3609e081c7a7}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!construct\_tree@{construct\_tree}}
+\index{construct\_tree@{construct\_tree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{construct\_tree()}{construct\_tree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Tree\+::\+Three\+D\+Node}} $\ast$ nnalgo\+::\+Three\+D\+Tree\+::construct\+\_\+tree (\begin{DoxyParamCaption}\item[{int}]{l,  }\item[{int}]{r,  }\item[{int}]{depth,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&}]{coords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recursively construct a 3-\/d tree containing all points in {\ttfamily coords}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & Left bound of {\ttfamily coords}. \\
+\hline
+{\em r} & Right bound of {\ttfamily coords}. \\
+\hline
+{\em depth} & Current depth within the nascent tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The root node of the newly constructed tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_af64a01cc94b4710e39200435d8d4ef2c}\label{classnnalgo_1_1ThreeDTree_af64a01cc94b4710e39200435d8d4ef2c}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!destruct\_tree@{destruct\_tree}}
+\index{destruct\_tree@{destruct\_tree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{destruct\_tree()}{destruct\_tree()}}
+{\footnotesize\ttfamily void nnalgo\+::\+Three\+D\+Tree\+::destruct\+\_\+tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} $\ast$}]{root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recursively destruct the 3-\/d tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The root of the 3-\/d tree. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_af925798f2f81f8ba103eedf53997cc09}\label{classnnalgo_1_1ThreeDTree_af925798f2f81f8ba103eedf53997cc09}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!distance\_squared@{distance\_squared}}
+\index{distance\_squared@{distance\_squared}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{distance\_squared()}{distance\_squared()}}
+{\footnotesize\ttfamily double nnalgo\+::\+Three\+D\+Tree\+::distance\+\_\+squared (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{a,  }\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Compute the square of the distance between two points in 3D space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A 3D point. \\
+\hline
+{\em b} & A 3D point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The square of the distance between point a and b in 3D space. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_ab5704363243192ebdee342518d45c2f4}\label{classnnalgo_1_1ThreeDTree_ab5704363243192ebdee342518d45c2f4}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!find\_median\_on\_axis@{find\_median\_on\_axis}}
+\index{find\_median\_on\_axis@{find\_median\_on\_axis}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{find\_median\_on\_axis()}{find\_median\_on\_axis()}}
+{\footnotesize\ttfamily int nnalgo\+::\+Three\+D\+Tree\+::find\+\_\+median\+\_\+on\+\_\+axis (\begin{DoxyParamCaption}\item[{int}]{l,  }\item[{int}]{r,  }\item[{int}]{depth,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&}]{coords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Find the index in {\ttfamily coords} of the median element on the current search axis. 
+
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree_ab5704363243192ebdee342518d45c2f4}{find\+\_\+median\+\_\+on\+\_\+axis()}} computes the median point by axis in the range \mbox{[}{\ttfamily l}, {\ttfamily r}\mbox{]}. The implementation has the side effect of sorting {\ttfamily coords} from index {\ttfamily l} to index {\ttfamily r}. The sort is performed with respect to the current axis (x, y, or z) which is calculated as axis = depth \% 3. 
+\begin{DoxyParams}{Parameters}
+{\em l} & Left bound of {\ttfamily coords}. \\
+\hline
+{\em r} & Right bound of {\ttfamily coords}. \\
+\hline
+{\em depth} & Level of the median within the tree. \\
+\hline
+{\em coords} & Vector of 3D point objects. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the median by axis in {\ttfamily coords} within the bounds \mbox{[}{\ttfamily l}, {\ttfamily r}\mbox{]}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_a5ee838827b4f1b602845dfc94d064e70}\label{classnnalgo_1_1ThreeDTree_a5ee838827b4f1b602845dfc94d064e70}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!operator=@{operator=}}
+\index{operator=@{operator=}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}}\& nnalgo\+::\+Three\+D\+Tree\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} \&}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\mbox{\hyperlink{classnnalgo_1_1ThreeDTree}{Three\+D\+Tree}} does not support assignment. 
+
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_acd7be01b8635aa74b5e0ce20e6e53c5d}\label{classnnalgo_1_1ThreeDTree_acd7be01b8635aa74b5e0ce20e6e53c5d}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!print\_tree@{print\_tree}}
+\index{print\_tree@{print\_tree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{print\_tree()}{print\_tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void nnalgo\+::\+Three\+D\+Tree\+::print\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Print the coordinates stored in this tree using an inorder traversal pattern. 
+
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_ae73393a7f2701f583240b3cd75d066f4}\label{classnnalgo_1_1ThreeDTree_ae73393a7f2701f583240b3cd75d066f4}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!print\_tree@{print\_tree}}
+\index{print\_tree@{print\_tree}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{print\_tree()}{print\_tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void nnalgo\+::\+Three\+D\+Tree\+::print\+\_\+tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} $\ast$}]{root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method used by the public \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_acd7be01b8635aa74b5e0ce20e6e53c5d}{print\+\_\+tree()}} to recrusively print the inorder traversal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The root of the 3-\/d tree. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_a71ccce863cd91782ec93e9c753b034e4}\label{classnnalgo_1_1ThreeDTree_a71ccce863cd91782ec93e9c753b034e4}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!radial\_search@{radial\_search}}
+\index{radial\_search@{radial\_search}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{radial\_search()}{radial\_search()}}
+{\footnotesize\ttfamily void nnalgo\+::\+Three\+D\+Tree\+::radial\+\_\+search (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{ref,  }\item[{double}]{rad,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&}]{neighbors }\end{DoxyParamCaption}) const}
+
+
+
+Find all the neighbors of {\ttfamily ref} within a search radius of size {\ttfamily rad}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & A 3D reference point. \\
+\hline
+{\em rad} & A nonnegative radius value. \\
+\hline
+{\em neighbors} & Vector used to store {\ttfamily ref} neighbors. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_a1eefdd343be5c532f2c200706caa55df}\label{classnnalgo_1_1ThreeDTree_a1eefdd343be5c532f2c200706caa55df}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!radial\_search\_@{radial\_search\_}}
+\index{radial\_search\_@{radial\_search\_}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{radial\_search\_()}{radial\_search\_()}}
+{\footnotesize\ttfamily void nnalgo\+::\+Three\+D\+Tree\+::radial\+\_\+search\+\_\+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}} $\ast$}]{root,  }\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{ref,  }\item[{double}]{rad,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} $>$ \&}]{neighbors,  }\item[{int}]{depth }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method used by the public \mbox{\hyperlink{classnnalgo_1_1ThreeDTree_a71ccce863cd91782ec93e9c753b034e4}{radial\+\_\+search()}} to find all neighbors of {\ttfamily ref} within {\ttfamily rad}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & A 3D reference point. \\
+\hline
+{\em rad} & A nonnegative radius value. \\
+\hline
+{\em neighbors} & Vector used to store {\ttfamily ref} neighbors. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classnnalgo_1_1ThreeDTree_a0561db464876f5a1f66a96238cb5d38c}\label{classnnalgo_1_1ThreeDTree_a0561db464876f5a1f66a96238cb5d38c}} 
+\index{nnalgo::ThreeDTree@{nnalgo::ThreeDTree}!root\_@{root\_}}
+\index{root\_@{root\_}!nnalgo::ThreeDTree@{nnalgo::ThreeDTree}}
+\doxysubsubsection{\texorpdfstring{root\_}{root\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnnalgo_1_1ThreeDTree_1_1ThreeDNode}{Three\+D\+Node}}$\ast$ nnalgo\+::\+Three\+D\+Tree\+::root\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The root of this 3-\/d tree. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+app/include/\mbox{\hyperlink{3d__tree_8h}{3d\+\_\+tree.\+h}}\item 
+app/src/\mbox{\hyperlink{3d__tree_8cc}{3d\+\_\+tree.\+cc}}\end{DoxyCompactItemize}

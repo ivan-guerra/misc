@@ -1,0 +1,158 @@
+\hypertarget{structnnalgo_1_1ThreeDPoint}{}\doxysection{nnalgo\+::Three\+D\+Point Struct Reference}
+\label{structnnalgo_1_1ThreeDPoint}\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+
+
+Declare a type for storing 3D coordinate data.  
+
+
+
+
+{\ttfamily \#include $<$3d\+\_\+tree.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_af4655d80a433e1090363b713fe61b851}{Three\+D\+Point}} ()
+\begin{DoxyCompactList}\small\item\em Default constructed \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_a0a5a40884702df34c1e5d861929259c6}{Three\+D\+Point}} (unsigned id, double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} with a set ID and location. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_a6ddad9b3e5821a8106b5c00c21c26f44}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\begin{DoxyCompactList}\small\item\em Overload \mbox{[}\mbox{]} to return the x, y, or z coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_aa2fe4fe95672ede0431d10e89369887a}{compare\+\_\+x}} (const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&a, const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&b)
+\begin{DoxyCompactList}\small\item\em Determine whether {\ttfamily a} is further left on the x-\/axis than {\ttfamily b}. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_a231802a63d6a62d8ccf63c77eda79dee}{compare\+\_\+y}} (const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&a, const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&b)
+\begin{DoxyCompactList}\small\item\em Determine whether {\ttfamily a} is further left on the y-\/axis than {\ttfamily b}. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_af2e1ca83db20c9264cf79324208924cb}{compare\+\_\+z}} (const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&a, const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&b)
+\begin{DoxyCompactList}\small\item\em Determine whether {\ttfamily a} is further left on the z-\/axis than {\ttfamily b}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_a88ea612437e7316e3c8cbc03dcbddad6}{id\+\_\+}}
+\item 
+double \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_ab417053c53ed2e09657ceab2ad394512}{x\+\_\+}}
+\item 
+double \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_aa76264bf7bf4d7981209c0ed3eeed984}{y\+\_\+}}
+\item 
+double \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint_ac8e639c351014dfedf62f01b953af59b}{z\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declare a type for storing 3D coordinate data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_af4655d80a433e1090363b713fe61b851}\label{structnnalgo_1_1ThreeDPoint_af4655d80a433e1090363b713fe61b851}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!ThreeDPoint@{ThreeDPoint}}
+\index{ThreeDPoint@{ThreeDPoint}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{ThreeDPoint()}{ThreeDPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily nnalgo\+::\+Three\+D\+Point\+::\+Three\+D\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructed \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}}. 
+
+No non-\/default constructed \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} should have ID of 0. \mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_a0a5a40884702df34c1e5d861929259c6}\label{structnnalgo_1_1ThreeDPoint_a0a5a40884702df34c1e5d861929259c6}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!ThreeDPoint@{ThreeDPoint}}
+\index{ThreeDPoint@{ThreeDPoint}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{ThreeDPoint()}{ThreeDPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily nnalgo\+::\+Three\+D\+Point\+::\+Three\+D\+Point (\begin{DoxyParamCaption}\item[{unsigned}]{id,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} with a set ID and location. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_aa2fe4fe95672ede0431d10e89369887a}\label{structnnalgo_1_1ThreeDPoint_aa2fe4fe95672ede0431d10e89369887a}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!compare\_x@{compare\_x}}
+\index{compare\_x@{compare\_x}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{compare\_x()}{compare\_x()}}
+{\footnotesize\ttfamily static bool nnalgo\+::\+Three\+D\+Point\+::compare\+\_\+x (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{a,  }\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Determine whether {\ttfamily a} is further left on the x-\/axis than {\ttfamily b}. 
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily a} is less than {\ttfamily b} with respect to x. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_a231802a63d6a62d8ccf63c77eda79dee}\label{structnnalgo_1_1ThreeDPoint_a231802a63d6a62d8ccf63c77eda79dee}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!compare\_y@{compare\_y}}
+\index{compare\_y@{compare\_y}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{compare\_y()}{compare\_y()}}
+{\footnotesize\ttfamily static bool nnalgo\+::\+Three\+D\+Point\+::compare\+\_\+y (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{a,  }\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Determine whether {\ttfamily a} is further left on the y-\/axis than {\ttfamily b}. 
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily a} is less than {\ttfamily b} with respect to y. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_af2e1ca83db20c9264cf79324208924cb}\label{structnnalgo_1_1ThreeDPoint_af2e1ca83db20c9264cf79324208924cb}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!compare\_z@{compare\_z}}
+\index{compare\_z@{compare\_z}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{compare\_z()}{compare\_z()}}
+{\footnotesize\ttfamily static bool nnalgo\+::\+Three\+D\+Point\+::compare\+\_\+z (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{a,  }\item[{const \mbox{\hyperlink{structnnalgo_1_1ThreeDPoint}{Three\+D\+Point}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Determine whether {\ttfamily a} is further left on the z-\/axis than {\ttfamily b}. 
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily a} is less than {\ttfamily b} with respect to z. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_a6ddad9b3e5821a8106b5c00c21c26f44}\label{structnnalgo_1_1ThreeDPoint_a6ddad9b3e5821a8106b5c00c21c26f44}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily double nnalgo\+::\+Three\+D\+Point\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload \mbox{[}\mbox{]} to return the x, y, or z coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Integral index into the coordinate triplet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The coordinate mapped to {\ttfamily i}. Zero is returned if i is not in \mbox{[}0,2\mbox{]}. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_a88ea612437e7316e3c8cbc03dcbddad6}\label{structnnalgo_1_1ThreeDPoint_a88ea612437e7316e3c8cbc03dcbddad6}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!id\_@{id\_}}
+\index{id\_@{id\_}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{id\_}{id\_}}
+{\footnotesize\ttfamily unsigned int nnalgo\+::\+Three\+D\+Point\+::id\+\_\+}
+
+Unique integral ID identifying this point. \mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_ab417053c53ed2e09657ceab2ad394512}\label{structnnalgo_1_1ThreeDPoint_ab417053c53ed2e09657ceab2ad394512}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!x\_@{x\_}}
+\index{x\_@{x\_}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{x\_}{x\_}}
+{\footnotesize\ttfamily double nnalgo\+::\+Three\+D\+Point\+::x\+\_\+}
+
+X axis location. \mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_aa76264bf7bf4d7981209c0ed3eeed984}\label{structnnalgo_1_1ThreeDPoint_aa76264bf7bf4d7981209c0ed3eeed984}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!y\_@{y\_}}
+\index{y\_@{y\_}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{y\_}{y\_}}
+{\footnotesize\ttfamily double nnalgo\+::\+Three\+D\+Point\+::y\+\_\+}
+
+Y axis location. \mbox{\Hypertarget{structnnalgo_1_1ThreeDPoint_ac8e639c351014dfedf62f01b953af59b}\label{structnnalgo_1_1ThreeDPoint_ac8e639c351014dfedf62f01b953af59b}} 
+\index{nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}!z\_@{z\_}}
+\index{z\_@{z\_}!nnalgo::ThreeDPoint@{nnalgo::ThreeDPoint}}
+\doxysubsubsection{\texorpdfstring{z\_}{z\_}}
+{\footnotesize\ttfamily double nnalgo\+::\+Three\+D\+Point\+::z\+\_\+}
+
+Z axis location. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/include/\mbox{\hyperlink{3d__tree_8h}{3d\+\_\+tree.\+h}}\end{DoxyCompactItemize}
