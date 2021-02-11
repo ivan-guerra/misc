@@ -1,6 +1,6 @@
 # Dice Invaders
 
-![Dice Invaders](https://github.com/ivan-guerra/dice_invaders/blob/master/gameplay.PNG)
+![Dice Invaders](https://github.com/ivan-guerra/misc/blob/master/dice_invaders/gameplay.PNG)
 
 ### Overview
 Dice Invaders (DI) is a simplified version of the original Space Invaders game. DI uses the DiceInvadersLib provided by DiceLA to perform graphics related tasks (i.e., no external graphics libs are needed to build and run). 
