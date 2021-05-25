@@ -12,6 +12,7 @@ from models.knn import KNNModel
 from models.support_vector_machine import SupportVectorMachineModel
 from models.bagged_decision_trees import BaggedDecisionTreesModel
 from models.random_forest import RandomForestModel
+from models.stochastic_gradient_boosting import StochasticGradientBoostingModel
 
 
 class ClassificationModelFactory:
@@ -28,6 +29,7 @@ class ClassificationModelFactory:
         self.SUPPORT_VECTOR_MACHINE = 'SupportVectorMachine'
         self.BAGGED_DECISION_TREES = 'BaggedDecisionTrees'
         self.RANDOM_FOREST = 'RandomForest'
+        self.SGB = 'StochasticGradientBoosting'
 
     def get_model(self, model_name, model_conf):
         """Return the model object  associated with model_name."""
@@ -44,5 +46,7 @@ class ClassificationModelFactory:
             return BaggedDecisionTreesModel(model_conf)
         elif model_name == self.RANDOM_FOREST:
             return RandomForestModel(model_conf)
+        elif model_name == self.SGB:
+            return StochasticGradientBoostingModel(model_conf)
         else:
             raise ValueError(model_name)
