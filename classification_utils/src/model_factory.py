@@ -7,6 +7,7 @@ config/ClassificationModelConfig.ini for details).
 """
 
 from models.logistic_regression import LogisticRegressionModel
+from models.ridge_classifier import RidgeClassifierModel
 
 
 class ClassificationModelFactory:
@@ -18,11 +19,14 @@ class ClassificationModelFactory:
 
     def __init__(self):
         self.LOGISTIC_REGRESSION = 'LogisticRegression'
+        self.RIDGE_CLASSIFIER = 'RidgeClassifier'
 
     def get_model(self, model_name, model_conf):
         """Return the model object  associated with model_name."""
 
         if model_name == self.LOGISTIC_REGRESSION:
             return LogisticRegressionModel(model_conf)
+        elif model_name == self.RIDGE_CLASSIFIER:
+            return RidgeClassifierModel(model_conf)
         else:
             raise ValueError(model_name)
