@@ -10,6 +10,7 @@ from models.logistic_regression import LogisticRegressionModel
 from models.ridge_classifier import RidgeClassifierModel
 from models.knn import KNNModel
 from models.support_vector_machine import SupportVectorMachineModel
+from models.bagged_decision_trees import BaggedDecisionTreesModel
 
 
 class ClassificationModelFactory:
@@ -24,6 +25,7 @@ class ClassificationModelFactory:
         self.RIDGE_CLASSIFIER = 'RidgeClassifier'
         self.KNN = 'KNN'
         self.SUPPORT_VECTOR_MACHINE = 'SupportVectorMachine'
+        self.BAGGED_DECISION_TREES = 'BaggedDecisionTrees'
 
     def get_model(self, model_name, model_conf):
         """Return the model object  associated with model_name."""
@@ -36,5 +38,7 @@ class ClassificationModelFactory:
             return KNNModel(model_conf)
         elif model_name == self.SUPPORT_VECTOR_MACHINE:
             return SupportVectorMachineModel(model_conf)
+        elif model_name == self.BAGGED_DECISION_TREES:
+            return BaggedDecisionTreesModel(model_conf)
         else:
             raise ValueError(model_name)
