@@ -8,6 +8,7 @@ config/ClassificationModelConfig.ini for details).
 
 from models.logistic_regression import LogisticRegressionModel
 from models.ridge_classifier import RidgeClassifierModel
+from models.knn import KNNModel
 
 
 class ClassificationModelFactory:
@@ -20,6 +21,7 @@ class ClassificationModelFactory:
     def __init__(self):
         self.LOGISTIC_REGRESSION = 'LogisticRegression'
         self.RIDGE_CLASSIFIER = 'RidgeClassifier'
+        self.KNN = 'KNN'
 
     def get_model(self, model_name, model_conf):
         """Return the model object  associated with model_name."""
@@ -28,5 +30,7 @@ class ClassificationModelFactory:
             return LogisticRegressionModel(model_conf)
         elif model_name == self.RIDGE_CLASSIFIER:
             return RidgeClassifierModel(model_conf)
+        elif model_name == self.KNN:
+            return KNNModel(model_conf)
         else:
             raise ValueError(model_name)
