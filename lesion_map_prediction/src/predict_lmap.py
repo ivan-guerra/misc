@@ -40,9 +40,6 @@ def predict_lesion_map(behavioral_score, encoder, model, rows, cols):
     An numpy.array containing rows x cols lesion map labels.
     """
 
-    # Each model in the models ensemble is used to make a predicition for each
-    # individual cell in the lesion map matrix. The collection of results
-    # for each cell is averaged to get the final prediction for that cell.
     predictions = []
     for i in range(rows):
         preds = []
